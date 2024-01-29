@@ -1,0 +1,161 @@
+header {
+    max-width: 90%;
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.menu-icon {
+    position: relative;
+    cursor: pointer;
+    height: 12px;
+    width: 40px;
+    z-index: 9999;
+}
+
+.menu-icon::before {
+    right: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+    height: 2.5px;
+    width: 40px;
+    background-color: var(--secondary-color);
+    transition: .3s ease-in-out;
+}
+
+.menu-icon::after {
+    right: 0;
+    top: 12px;
+    position: absolute;
+    content: "";
+    height: 2.5px;
+    width: 30px;
+    background-color: var(--secondary-color);
+    transition: .3s ease-in-out;
+}
+
+.menu-green::before,
+.menu-green::after{
+    background-color: var(--primary-color);
+}
+
+.menu-icon.open::before {
+    transform: rotate(-45deg);
+    transition: .3s ease-in-out;
+    background-color: var(--secondary-color);
+}
+
+.menu-icon.open::after {
+    transform: rotate(45deg);
+    top: 0;
+    width: 40px;
+    transition: .3s ease-in-out;
+    background-color: var(--secondary-color);
+}
+
+.menu {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 0px;
+    width: 0px;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transition: .3s ease-in-out;
+    z-index: 9998;
+}
+
+.menu-open {
+    height: 500px;
+    width: 400px;
+    transition: .3s ease-in-out;
+}
+
+.menu .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 4rem;
+}
+
+.menu .menu-items ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu .menu-items p {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    opacity: .35;
+    cursor: default;
+    font-size: 1rem;
+}
+
+.menu .menu-items .socials {
+    display: flex;
+    gap: 1.5rem;
+    text-transform: uppercase;
+}
+
+.menu .menu-items ul li,
+.menu .menu-items .socials a {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.menu .menu-items ul li::after,
+.menu .menu-items .socials a::after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 100%;
+    background-color: var(--secondary-light-color);
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.menu .menu-items ul li:hover::after,
+.menu .menu-items .socials a:hover::after {
+    transition: .3s ease-in-out;
+    opacity: .3;
+    right: -10px;
+}
+
+.logo{
+    
+}
+
+.logo .logo-child1{
+
+}
+
+.logo .logo-child1{
+    
+}
+
+.logo .logo-min{
+    
+}

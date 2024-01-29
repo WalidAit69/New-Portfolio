@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #ccf381;
+    --primary-light-color: #e7f7ca;
+    --secondary-color: #4831d4;
+    --secondary-light-color: #7361e9;
+    --secondary-text-color: #3d155f;
+}
+
+html {
+    height: 600vh;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+::selection {
+    background-color: rgba(111, 132, 230, .3);
+}
