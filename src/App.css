@@ -4,6 +4,10 @@
 }
 
 
+/* =========================================== */
+/* ================ Home page ================ */
+/* =========================================== */
+
 /* Section 1 */
 
 .section1 {
@@ -406,7 +410,7 @@
     transform: rotate(45deg);
     background-color: var(--secondary-color);
     cursor: pointer;
-    transition: .2s;
+    transition: .3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 
 .nav-dot.active {
@@ -415,7 +419,7 @@
     rotate: -45deg;
     background-color: transparent;
     border: 3px solid var(--secondary-color);
-    transition: .2s;
+    transition: .3s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 
 .color-green {
@@ -427,4 +431,38 @@
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
 
+}
+
+/* =========================================== */
+/* ================ Work page ================ */
+/* =========================================== */
+
+.work-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25vh;
+}
+
+.work-container .work-title{
+    text-align: center;
+}
+
+.work-container .work-title h1{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 2rem;
+}
+
+.work-container .work-title span{
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.work-container .work-title p{
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.work-card{
+    height: 250px;
+    width: 350px;
+    background-color: red;
 }

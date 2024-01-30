@@ -14,6 +14,7 @@ header {
 header h1 {
     color: var(--primary-color);
     font-size: 2.5rem;
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .menu-icon {
@@ -142,6 +143,11 @@ header h1 {
     transition: .3s ease-in-out;
     opacity: .3;
     right: -10px;
+}
+
+.menu-purple{
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    color: var(--secondary-color);
 }
 
 .logo{

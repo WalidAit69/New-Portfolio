@@ -9,8 +9,7 @@
     --secondary-text-color: #3d155f;
 }
 
-html {
-    height: 600vh;
+.home {
     scroll-snap-type: y mandatory;
 }
 
@@ -32,4 +31,9 @@ section {
 
 ::selection {
     background-color: rgba(111, 132, 230, .3);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }

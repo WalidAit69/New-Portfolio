@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./header.css";
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
-function Header({ Colorchange }) {
+function Header({ Colorchange, Logochange, isHome }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = async () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
   return (
     <header className=''>
-      <h1 className='logo'>
-        <span
-          className='logo-child1'>W</span>
-        <span
-          className='logo-min'>a</span>
-        <span
-          initial={{ x: 20 }}
-          whileInView={{ x: 0 }}
-          className='logo-child2'>lid</span>
-      </h1>
+      <Link to={'/'}>
+        <h1 className={`logo ${Logochange || isHome ? 'menu-purple' : ''}`}>
+          <span
+            className='logo-child1'>W</span>
+          <span
+            className='logo-min'>a</span>
+          <span
+            initial={{ x: 20 }}
+            whileInView={{ x: 0 }}
+            className='logo-child2'>lid</span>
+        </h1>
+      </Link>
 
       <div className={`menu-icon ${isMenuOpen ? 'open' : ''} ${Colorchange ? 'menu-green' : ''}`} onClick={toggleMenu}>
       </div>
@@ -36,7 +40,9 @@ function Header({ Colorchange }) {
             whileInView={{ y: 0, opacity: 1 }}
             initial={{ y: 20, opacity: 0 }}
           >
-            <li>My Work</li>
+            <Link to={'/work'}>
+              <li>My Work</li>
+            </Link>
             <li>My Shelf</li>
             <li>My Resume</li>
           </motion.ul>
