@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import Header from './components/header';
 import useHeaderStore from './store/headerStore';
+import WorkDetail from './pages/WorkDetail';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work setisHome={setisHome} />} />
+        <Route path="/work/:title" element={<WorkDetail setisHome={setisHome} />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,10 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import WorkCard from '../components/WorkCard'
+import axios from 'axios';
+import FooterSm from "../components/FooterSm"
 
 function Work({ setisHome }) {
+    const [workcards, setworkcards] = useState([]);
 
     useEffect(() => {
-        setisHome(true)
+        setisHome(true);
+
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('../src/store/workdata.json');
+                setworkcards(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
 
     }, [])
 
@@ -16,10 +30,14 @@ function Work({ setisHome }) {
                     <p>Selected work I've taken on in the past.</p>
                 </div>
 
-                <div>
-                    <WorkCard />
+                <div className='cards-container'>
+                    {workcards.length > 0 && workcards.map((card, index) => (
+                        <WorkCard key={index} image={card.image} title={card.title} link={card.link} />
+                    ))}
                 </div>
             </section>
+
+            <FooterSm />
         </main>
     )
 }

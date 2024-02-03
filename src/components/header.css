@@ -1,14 +1,26 @@
 header {
-    max-width: 90%;
     width: 100%;
-    margin: 2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
+}
+
+.header {
+    max-width: 90rem;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-blur {
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 header h1 {
@@ -45,11 +57,6 @@ header h1 {
     width: 30px;
     background-color: var(--secondary-color);
     transition: .3s ease-in-out;
-}
-
-.menu-green::before,
-.menu-green::after{
-    background-color: var(--primary-color);
 }
 
 .menu-icon.open::before {
@@ -145,23 +152,25 @@ header h1 {
     right: -10px;
 }
 
-.menu-purple{
+.logo-purple {
     transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
     color: var(--secondary-color);
 }
 
-.logo{
-    
+.menu-green::before,
+.menu-green::after {
+    background-color: var(--primary-color);
 }
 
-.logo .logo-child1{
-
+.menu-purple::before,
+.menu-purple::after {
+    background-color: var(--secondary-color);
 }
 
-.logo .logo-child1{
-    
-}
+.logo {}
 
-.logo .logo-min{
-    
-}
+.logo .logo-child1 {}
+
+.logo .logo-child1 {}
+
+.logo .logo-min {}

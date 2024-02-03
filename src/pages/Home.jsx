@@ -1,7 +1,6 @@
 import '../index.css'
 import '../App.css'
 import Introduction from '../sections/Introduction'
-import Header from '../components/header'
 import Skills from '../sections/Skills'
 import Info from '../sections/Info'
 import Shelf from '../sections/Shelf'
@@ -16,7 +15,7 @@ function Home() {
     const sections = ['introduction', 'skills', 'info', 'shelf', 'contact', 'footer'];
     const [activeSection, setActiveSection] = useState(sections[0]);
 
-    const { colorChange, logoChange, setColorChange, setLogoChange } = useHeaderStore();
+    const { colorChange, logoChange, setColorChange, setLogoChange, isHome, setisHome } = useHeaderStore();
 
     const handleIntersect = (entries, observer) => {
         entries.forEach((entry) => {
@@ -39,6 +38,10 @@ function Home() {
         });
     };
 
+    useEffect(() => {
+        setisHome(false);
+
+    },[])
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersect, {
@@ -53,8 +56,11 @@ function Home() {
             }
         });
 
+        document.documentElement.style.scrollSnapType = 'y mandatory';
+
         return () => {
             observer.disconnect();
+            document.documentElement.style.scrollSnapType = '';
         };
     }, [sections]);
 
@@ -66,7 +72,7 @@ function Home() {
     };
 
     return (
-        <main className='home'>
+        <main className='home' id='home'>
 
             <section id='introduction'>
                 <Introduction />

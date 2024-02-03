@@ -3,6 +3,10 @@
     background-color: var(--secondary-text-color);
 }
 
+.section6sm{
+    height: 600px;
+}
+
 .footer{
     height: 100%;
     display: flex;

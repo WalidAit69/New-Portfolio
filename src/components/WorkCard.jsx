@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function WorkCard() {
+function WorkCard({ image, title, link }) {
     return (
         <div className='work-card'>
-            <Link>
-                <figure>
-                    <img src="" alt="" />
-                </figure>
+            <Link to={`/work/${title}`}>
+                <div className='work-card-img'>
+                    <img src={image} alt="mercedes-logo" />
+                </div>
                 <div className='work-card-info'>
-                    <span>title</span>
-                    <a href="">link</a>
+                    <span>{title}</span>
+                    <a href="">{link}</a>
                 </div>
             </Link>
         </div>
