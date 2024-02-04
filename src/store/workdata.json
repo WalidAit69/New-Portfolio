@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "image": "./src/assets/mercedes-logo.png",
+    "image": "/src/assets/mercedes-logo.png",
     "title": "Mercedes-Benz",
     "link": "https://mercedes-benz-seven.vercel.app",
     "gallery": {
@@ -12,31 +12,31 @@
   },
   {
     "id": "2",
-    "image": "./src/assets/mercedes-logo.png",
+    "image": "/src/assets/mercedes-logo.png",
     "title": "Roomsy",
     "link": "https://roomsy-v2.vercel.app"
   },
   {
     "id": "3",
-    "image": "./src/assets/mercedes-logo.png",
+    "image": "/src/assets/mercedes-logo.png",
     "title": "Example Project",
     "link": "https://example-project.vercel.app"
   },
   {
     "id": "4",
-    "image": "./src/assets/mercedes-logo.png",
+    "image": "/src/assets/mercedes-logo.png",
     "title": "Another Example",
     "link": "https://another-example.vercel.app"
   },
   {
     "id": "5",
-    "image": "./src/assets/mercedes-logo.png",
+    "image": "/src/assets/mercedes-logo.png",
     "title": "Yet Another Project",
     "link": "https://yet-another-project.vercel.app"
   },
   {
     "id": "6",
-    "image": "./src/assets/mercedes-logo.png",
+    "image": "/src/assets/mercedes-logo.png",
     "title": "Final Example",
     "link": "https://final-example.vercel.app"
   }

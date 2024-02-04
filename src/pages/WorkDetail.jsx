@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import WorkCard from '../components/WorkCard'
 
 function WorkDetail({ setisHome }) {
 
@@ -24,17 +24,14 @@ function WorkDetail({ setisHome }) {
         setisHome(true);
         fetchData(title);
     }, [title]);
-    
+
 
     return (
         <main className='WorkDetail'>
             <section className='work-container'>
                 <div className='work-title'>
                     <h1><span>{singleCard?.title}</span></h1>
-                    <img src={singleCard?.image} alt="" />
                 </div>
-                <img src={singleCard?.image} alt="" />
-                <p>{singleCard?.image}</p>
             </section>
 
         </main>

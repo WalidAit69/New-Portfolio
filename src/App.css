@@ -462,7 +462,8 @@
 }
 
 .work-card {
-    height: 320px;
+    display: flex;
+    flex-direction: column;
     width: 400px;
     background-color: rgba(245, 245, 245, 0.434);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
