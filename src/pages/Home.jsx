@@ -15,7 +15,7 @@ function Home() {
     const sections = ['introduction', 'skills', 'info', 'shelf', 'contact', 'footer'];
     const [activeSection, setActiveSection] = useState(sections[0]);
 
-    const { colorChange, logoChange, setColorChange, setLogoChange, isHome, setisHome } = useHeaderStore();
+    const { colorChange, setColorChange, setLogoChange, setisHome } = useHeaderStore();
 
     const handleIntersect = (entries, observer) => {
         entries.forEach((entry) => {
@@ -39,9 +39,9 @@ function Home() {
     };
 
     useEffect(() => {
-        setisHome(false);
+        setisHome(true);
 
-    },[])
+    }, [])
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersect, {

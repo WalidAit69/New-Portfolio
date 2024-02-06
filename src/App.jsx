@@ -9,15 +9,14 @@ import WorkDetail from './pages/WorkDetail';
 
 
 function App() {
-  const { colorChange, logoChange, isHome, setColorChange, setLogoChange, setisHome } = useHeaderStore();
 
   return (
     <BrowserRouter>
-      <Header Colorchange={colorChange} Logochange={logoChange} isHome={isHome} />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/work" element={<Work setisHome={setisHome} />} />
-        <Route path="/work/:title" element={<WorkDetail setisHome={setisHome} />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/work/:title" element={<WorkDetail />} />
       </Routes>
     </BrowserRouter>
   )

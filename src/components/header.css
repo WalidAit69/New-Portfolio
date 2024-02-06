@@ -77,7 +77,6 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 0px;
     width: 0px;
-    color: var(--secondary-color);
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -86,6 +85,7 @@ header h1 {
     top: 0;
     transition: .3s ease-in-out;
     z-index: 9998;
+    color: var(--secondary-color);
 }
 
 .menu-open {
@@ -156,6 +156,11 @@ header h1 {
     color: var(--secondary-color);
 }
 
+.logo-green {
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    color: var(--primary-color);
+}
+
 .menu-green::before,
 .menu-green::after {
     background-color: var(--primary-color);
@@ -173,3 +178,17 @@ header h1 {
 .logo .logo-child1 {}
 
 .logo .logo-min {}
+
+
+.menu-black-green {
+    background-color: black;
+    color: var(--primary-color);
+}
+
+.menu-icon.open-green::before {
+    background-color: var(--primary-color);
+}
+
+.menu-icon.open-green::after {
+    background-color: var(--primary-color);
+}

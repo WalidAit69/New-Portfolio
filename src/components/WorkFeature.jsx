@@ -1,18 +1,33 @@
 import React from 'react';
 import img from "../assets/1.jpg"
+import { motion } from "framer-motion"
 
-function WorkFeature({ reverse , title , desc , image}) {
+function WorkFeature({ reverse, title, desc, image }) {
     return (
         <section className={`WorkFeature ${reverse && 'WorkFeaturereverse'}`}>
-            <div className="left-WorkFeature">
+            <motion.div
+                initial={{ y: 300, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: .2, ease: [0.8, 0, 0, 0.8] }}
+                className="left-WorkFeature">
                 <span>{title}</span>
                 <p>{desc}</p>
                 <a href="" className='workdetail-btn'>View project</a>
-            </div>
+            </motion.div>
 
-            <div className="right-WorkFeature">
+            {!reverse ? <motion.div
+                initial={{ x: 300, rotate: 10 }}
+                whileInView={{ x: 0, rotate: 0 }}
+                transition={{ duration: 1, ease: [0.8, 0, 0, 0.8] }}
+                className="right-WorkFeature">
                 <img src={img} alt="" />
-            </div>
+            </motion.div> : <motion.div
+                initial={{ x: -300, rotate: -10 }}
+                whileInView={{ x: 0, rotate: 0 }}
+                transition={{ duration: 1, ease: [0.8, 0, 0, 0.8] }}
+                className="right-WorkFeature">
+                <img src={img} alt="" />
+            </motion.div>}
         </section>
     )
 }

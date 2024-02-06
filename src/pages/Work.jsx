@@ -2,12 +2,15 @@ import React, { useEffect, useState } from 'react'
 import WorkCard from '../components/WorkCard'
 import axios from 'axios';
 import FooterSm from "../components/FooterSm"
+import useHeaderStore from '../store/headerStore';
 
-function Work({ setisHome }) {
+function Work() {
+    const { setisHome } = useHeaderStore();
+
     const [workcards, setworkcards] = useState([]);
 
     useEffect(() => {
-        setisHome(true);
+        setisHome(false);
 
         const fetchData = async () => {
             try {

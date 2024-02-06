@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import "./header.css";
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import useHeaderStore from '../store/headerStore';
 
 
-function Header({ Colorchange, Logochange, isHome }) {
+function Header() {
+  const { colorChange, logoChange, isHome, isWorkdetail } = useHeaderStore();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,10 +33,10 @@ function Header({ Colorchange, Logochange, isHome }) {
 
 
   return (
-    <header className={`${isHome && 'header-blur'}`}>
+    <header className={`${!isHome && 'header-blur'}`}>
       <div className="header">
         <Link to={'/'}>
-          <h1 className={`logo ${Logochange ? 'logo-purple' : isHome ? 'logo-green' : ''}`}>
+          <h1 className={`logo ${logoChange && 'logo-purple'} ${!isHome && 'logo-green'}`}>
             <span
               className='logo-child1'>W</span>
             <span
@@ -46,10 +48,10 @@ function Header({ Colorchange, Logochange, isHome }) {
           </h1>
         </Link>
 
-        <div className={`menu-icon ${isHome && 'menu-green'} ${isMenuOpen && 'open'} ${Colorchange && 'menu-green'}`} onClick={toggleMenu}>
+        <div className={`menu-icon ${!isHome && 'menu-green open-green'} ${isMenuOpen && 'open'} ${colorChange && 'menu-green'}`} onClick={toggleMenu}>
         </div>
 
-        <nav className={`menu ${isMenuOpen ? "menu-open" : ""}`}>
+        <nav className={`menu ${isMenuOpen && "menu-open"} ${!isHome && 'menu-black-green'}`}>
           <motion.div
             animate={{ display: isMenuOpen ? 'flex' : 'none' }}
             transition={{ delay: isMenuOpen ? 0.3 : 0 }}

@@ -5,9 +5,13 @@ import { motion, useAnimation, useScroll } from "framer-motion";
 import WorkDetailTitle from '../components/WorkDetailTitle';
 import WorkFeature from '../components/WorkFeature';
 import OtherProjects from '../components/OtherProjects';
+import useHeaderStore from '../store/headerStore';
+import particles1 from "../assets/workparticle1.svg";
+import particles2 from "../assets/workparticle2.svg";
 
-function WorkDetail({ setisHome }) {
 
+function WorkDetail() {
+    const { setisHome } = useHeaderStore();
     const [singleCard, setsingleCard] = useState();
     const { title } = useParams();
 
@@ -24,9 +28,12 @@ function WorkDetail({ setisHome }) {
     };
 
     useEffect(() => {
-        setisHome(true);
         fetchData(title);
     }, [title]);
+
+    useEffect(() => {
+        setisHome(false);
+    }, [])
 
     const handleAnimationComplete = () => {
         document.getElementById('img2').style.display = 'none';
@@ -77,6 +84,8 @@ function WorkDetail({ setisHome }) {
                     <a href='' className='workdetail-btn'>Github Repo</a>
                 </div>
 
+                <img src={particles2} />
+                <img src={particles1} />
             </section>
 
             <div className='workdetail-slider'>
