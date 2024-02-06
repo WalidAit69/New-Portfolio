@@ -34,7 +34,7 @@ function Header({ Colorchange, Logochange, isHome }) {
     <header className={`${isHome && 'header-blur'}`}>
       <div className="header">
         <Link to={'/'}>
-          <h1 className={`logo ${Logochange || isHome ? 'logo-purple' : ''}`}>
+          <h1 className={`logo ${Logochange ? 'logo-purple' : isHome ? 'logo-green' : ''}`}>
             <span
               className='logo-child1'>W</span>
             <span
@@ -46,7 +46,7 @@ function Header({ Colorchange, Logochange, isHome }) {
           </h1>
         </Link>
 
-        <div className={`menu-icon ${isHome && 'menu-purple'} ${isMenuOpen && 'open'} ${Colorchange && 'menu-green'}`} onClick={toggleMenu}>
+        <div className={`menu-icon ${isHome && 'menu-green'} ${isMenuOpen && 'open'} ${Colorchange && 'menu-green'}`} onClick={toggleMenu}>
         </div>
 
         <nav className={`menu ${isMenuOpen ? "menu-open" : ""}`}>

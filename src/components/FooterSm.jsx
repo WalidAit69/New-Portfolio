@@ -1,9 +1,9 @@
 import React from 'react'
 
-function FooterSm() {
+function FooterSm({ green }) {
     return (
         <footer>
-            <div className='section6 section6sm'>
+            <div className={`section6sm ${green ? 'section6green' : 'section6'}`}>
                 <div className='footer container'>
                     <div className='footer-top'>
                         <div className='footer-top-left'>

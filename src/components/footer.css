@@ -1,14 +1,13 @@
-
-.section6{
+.section6 {
     background-color: var(--secondary-text-color);
 }
 
-.section6sm{
+.section6sm {
     height: 600px;
     margin-top: 10rem;
 }
 
-.footer{
+.footer {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@
     font-size: 1.6rem;
 }
 
-.footer ul{
+.footer ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -53,21 +52,21 @@
     right: -10px;
 }
 
-.footer-top{
+.footer-top {
     width: 50%;
     display: flex;
     align-items: end;
     justify-content: space-between;
 }
 
-.footer-top-left p{
+.footer-top-left p {
     color: rgb(211, 205, 205);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.3rem;
 }
 
-.footer-bottom{
+.footer-bottom {
     border-top: 1px solid rgba(211, 205, 205, 0.586);
     margin-top: 5rem;
     padding-top: 1rem;
@@ -80,4 +79,21 @@
     display: flex;
     gap: 1.5rem;
     text-transform: uppercase;
+}
+
+.section6green {
+    background-color: var(--primary-color);
+}
+
+.section6green .footer {
+    color: black;
+}
+
+.section6green .footer-top-left p {
+    color: black;
+    font-weight: 800;
+}
+
+.section6green .footer-bottom {
+    border-top: 1px solid rgba(66, 66, 66, 0.586);
 }

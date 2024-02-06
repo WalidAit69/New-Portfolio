@@ -9,11 +9,14 @@
     --secondary-text-color: #3d155f;
 }
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     position: relative;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
