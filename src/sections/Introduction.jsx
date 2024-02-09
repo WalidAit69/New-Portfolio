@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from "../assets/profile.jpg";
+import handsome from "../assets/profile.jpg";
 import particles from "../assets/particles.svg";
 import "../App.css";
 
@@ -22,7 +22,7 @@ function Introduction() {
         <div className="right-presentation">
           <div className="handsome">
             <figure>
-              <img src={profile} alt="a very handsome man" />
+              <img src={handsome} alt="a very handsome man" />
               <img className='particles' src={particles} />
             </figure>
           </div>

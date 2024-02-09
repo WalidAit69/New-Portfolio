@@ -171,14 +171,37 @@ header h1 {
     background-color: var(--secondary-color);
 }
 
-.logo {}
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 2.5rem;
+    width: 130px;
+    cursor: default;
+}
 
-.logo .logo-child1 {}
+.logo * {
+    cursor: pointer;
+}
 
-.logo .logo-child1 {}
+.logo svg {
+    padding: 0;
+    margin: 0;
+    width: 65px;
+    transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
+    z-index: 99;
+    margin-left: 1.6rem;
+}
 
-.logo .logo-min {}
+.logo .logo-child1 {
+    position: absolute;
+    left: 0;
+}
 
+.logo .logo-child2 {
+    position: absolute;
+    right: 0;
+}
 
 .menu-black-green {
     background-color: black;
@@ -191,4 +214,17 @@ header h1 {
 
 .menu-icon.open-green::after {
     background-color: var(--primary-color);
+}
+
+.draw {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPath 3s cubic-bezier(.8, 0, 0, .8) forwards;
+    transition: .3s ease-in-out;
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
 }

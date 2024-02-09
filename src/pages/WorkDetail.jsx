@@ -84,8 +84,14 @@ function WorkDetail() {
                     <a href='' className='workdetail-btn'>Github Repo</a>
                 </div>
 
-                <img src={particles2} />
-                <img src={particles1} />
+                <div className="workdetail-particle1">
+                    <img src={particles2} />
+                </div>
+
+                <div className="workdetail-particle2">
+                    <img src={particles1} />
+                </div>
+
             </section>
 
             <div className='workdetail-slider'>
