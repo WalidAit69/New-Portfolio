@@ -41,6 +41,8 @@ function Home() {
     useEffect(() => {
         setisHome(true);
         setisResume(false);
+        document.title = 'Walid Ait Harma: Fullstack Developer'
+
     }, [])
 
     useEffect(() => {

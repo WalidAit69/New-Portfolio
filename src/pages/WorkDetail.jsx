@@ -34,6 +34,8 @@ function WorkDetail() {
     useEffect(() => {
         setisHome(false);
         setisResume(false);
+        document.title = `Walid Ait Harma: ${title}`
+
     }, [])
 
     const handleAnimationComplete = () => {

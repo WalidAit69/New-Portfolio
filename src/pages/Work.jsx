@@ -13,6 +13,8 @@ function Work() {
         setisHome(false);
         setisResume(false);
 
+        document.title = "Walid Ait Harma: Projects"
+
         const fetchData = async () => {
             try {
                 const response = await axios.get('../src/store/workdata.json');

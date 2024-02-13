@@ -6,6 +6,7 @@ function ResumePage() {
 
     useEffect(() => {
         setisResume(true)
+        document.title = "Walid Ait Harma: Resume"
 
     }, [])
 

@@ -131,8 +131,8 @@ function Header() {
               >
                 <p>say hello</p>
                 <ul>
-                  <li onClick={closeMenu}>aitwalid2000@gmail.com</li>
-                  <li onClick={closeMenu}>in/walidaitharma</li>
+                  <a href='mailto:aitwalid2000@gmail.com' onClick={closeMenu}>aitwalid2000@gmail.com</a>
+                  <a href='https://www.linkedin.com/in/walidaitharma/' target='_blank' onClick={closeMenu}>in/walidaitharma</a>
                 </ul>
               </motion.div>
 

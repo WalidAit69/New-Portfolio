@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function FooterSm({ green }) {
     return (
@@ -9,16 +10,16 @@ function FooterSm({ green }) {
                         <div className='footer-top-left'>
                             <p>Say hello</p>
                             <ul>
-                                <li>aitwalid2000@gmail.com</li>
-                                <li>in/walidaitharma</li>
+                                <a href='mailto:aitwalid2000@gmail.com'>aitwalid2000@gmail.com</a>
+                                <a href='https://www.linkedin.com/in/walidaitharma/' target='_blank'>in/walidaitharma</a>
                             </ul>
                         </div>
 
                         <div className='footer-top-right'>
                             <ul>
-                                <li>My Work</li>
-                                <li>My Shelf</li>
-                                <li>My Resume</li>
+                                <Link to={'/work'}>My Work</Link>
+                                <Link>My Shelf</Link>
+                                <Link to={'/resume'}>My Resume</Link>
                             </ul>
                         </div>
                     </div>
