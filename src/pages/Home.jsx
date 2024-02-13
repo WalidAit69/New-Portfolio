@@ -15,7 +15,7 @@ function Home() {
     const sections = ['introduction', 'skills', 'info', 'shelf', 'contact', 'footer'];
     const [activeSection, setActiveSection] = useState(sections[0]);
 
-    const { colorChange, setColorChange, setLogoChange, setisHome } = useHeaderStore();
+    const { colorChange, setColorChange, setLogoChange, setisHome, setisResume } = useHeaderStore();
 
     const handleIntersect = (entries, observer) => {
         entries.forEach((entry) => {
@@ -40,7 +40,7 @@ function Home() {
 
     useEffect(() => {
         setisHome(true);
-
+        setisResume(false);
     }, [])
 
     useEffect(() => {

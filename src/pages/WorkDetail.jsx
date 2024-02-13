@@ -11,7 +11,7 @@ import particles2 from "../assets/workparticle2.svg";
 
 
 function WorkDetail() {
-    const { setisHome } = useHeaderStore();
+    const { setisHome, setisResume } = useHeaderStore();
     const [singleCard, setsingleCard] = useState();
     const { title } = useParams();
 
@@ -33,6 +33,7 @@ function WorkDetail() {
 
     useEffect(() => {
         setisHome(false);
+        setisResume(false);
     }, [])
 
     const handleAnimationComplete = () => {

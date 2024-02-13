@@ -792,3 +792,263 @@
 .current-work {
     border: 2px solid var(--primary-color);
 }
+
+
+
+
+/* =========================================== */
+/* ================ Resume page ================ */
+/* =========================================== */
+
+.resume-container {
+    background-color: rgb(245, 245, 245);
+    width: 85%;
+    margin: 5rem auto;
+}
+
+.resume-meta {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+}
+
+.resume-meta div,
+.resume-meta a {
+    display: flex;
+    align-items: center;
+    gap: .1rem;
+    cursor: pointer;
+}
+
+.resume {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.resume-skills {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-logo {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    padding-left: 9rem;
+}
+
+.resume-logo .logo {
+    font-size: 2.5rem;
+}
+
+.resume-contact {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 70%;
+}
+
+.resume-contact a {
+    color: var(--secondary-color);
+    font-weight: 700;
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+}
+
+.resume-contact a::before {
+    content: "";
+    width: 105%;
+    height: 7px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: -3px;
+    bottom: 3px;
+    z-index: -1;
+    transition: .3s ease-in-out;
+}
+
+.resume-contact a:hover::before {
+    bottom: -1px;
+    height: 5px;
+    transition: .3s ease-in-out;
+
+}
+
+.resume-contact span {
+    font-weight: 500;
+    color: rgb(92, 92, 92);
+}
+
+.resume-tech {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+    width: 70%;
+}
+
+.resume-tech h2 {
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.resume-tech ul {
+    list-style: square;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    color: rgb(92, 92, 92);
+    text-transform: capitalize;
+}
+
+.resume-info {
+    width: 80%;
+}
+
+.resume-info-container {
+    padding-left: 2rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.resume-info-container p {
+    max-width: 500px;
+}
+
+.resume-info-container .title-container {
+    padding-top: 2rem;
+}
+
+.resume-header h1 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.resume-header h2 {
+    color: rgb(74, 71, 71);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.55rem;
+    margin: 0;
+}
+
+.resume-info p,
+.resume-info ul li {
+    color: gray;
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+.resume-header p {
+    margin: 3rem 0;
+}
+
+.resume-info-container span.title {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 0;
+}
+
+.resume-info-container span.title::before {
+    content: "";
+    width: 100%;
+    height: 12px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 2px;
+    z-index: -1;
+}
+
+.edu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.edu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.edu-title div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.edu-title span.edu-h1 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.edu-title span {
+    color: gray;
+}
+
+.edu-title span.edu-h2 {
+    font-size: 1.2rem;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.edu-title span.edu-h2::before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: gray;
+}
+
+.edu ul {
+    padding-left: 1.2rem;
+    list-style: square;
+    margin: 0;
+}
+
+.edu ul li {
+    margin: .5rem 0;
+    text-transform: uppercase;
+}
+
+.resume-experience ul li {
+    text-transform: capitalize;
+}
+
+.resume-experience,
+.resume-projects {
+    border: none;
+}
+
+.resume-projects {
+    margin: 2rem 0 15rem 0;
+}
+
+.resume-projects p {
+    display: block;
+    max-width: 520px;
+}
+
+.resume-page{
+    height: 100vh;
+    width: 100%;
+}

@@ -196,11 +196,13 @@ header h1 {
 .logo .logo-child1 {
     position: absolute;
     left: 0;
+    top: -2px;
 }
 
 .logo .logo-child2 {
     position: absolute;
     right: 0;
+    top: -2px;
 }
 
 .menu-black-green {

@@ -5,12 +5,13 @@ import FooterSm from "../components/FooterSm"
 import useHeaderStore from '../store/headerStore';
 
 function Work() {
-    const { setisHome } = useHeaderStore();
+    const { setisHome, setisResume } = useHeaderStore();
 
     const [workcards, setworkcards] = useState([]);
 
     useEffect(() => {
         setisHome(false);
+        setisResume(false);
 
         const fetchData = async () => {
             try {
