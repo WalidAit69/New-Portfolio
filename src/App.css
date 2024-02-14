@@ -9,27 +9,39 @@
 /* =========================================== */
 
 /* Section 1 */
-
 .section1 {
+    height: 100%;
     background: linear-gradient(90deg, #4831d4 67%, #ccf381 33%);
     z-index: -99;
+    position: relative;
+    padding-top: 5rem;
+}
+
+.section1 .longparticle {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-15%);
+    z-index: 9999;
 }
 
 .presentation-section {
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
     position: relative;
     z-index: 0;
+    padding: 0 5rem;
 }
 
 .left-presentation {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 90%;
+    width: 50%;
     justify-content: center;
-    gap: 8rem;
+    align-items: center;
 }
 
 .left-presentation div:nth-child(1) h1 {
@@ -54,7 +66,7 @@
     border-radius: 50%;
     background-color: var(--primary-light-color);
     right: -20px;
-    bottom: 15px;
+    bottom: 24px;
 }
 
 .left-presentation div:nth-child(1) h2 {
@@ -67,6 +79,7 @@
 .left-presentation div:nth-child(2) {
     display: flex;
     gap: 2rem;
+    margin-top: 5rem;
     max-width: 550px;
 }
 
@@ -76,45 +89,45 @@
 
 .right-presentation {
     width: 50%;
-    display: flex;
-    justify-content: end;
 }
 
 .handsome {
     position: relative;
 }
 
-.handsome img {
-    width: 500px;
-    position: relative;
+.handsome .handsome-img {
+    width: 450px;
     z-index: -1;
 }
 
 .handsome::after {
     position: absolute;
     content: "";
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     border: 3px solid white;
     top: 40px;
-    right: -10px;
+    right: 0;
     z-index: -2;
 }
 
 .handsome .particles {
-    width: auto;
+    width: 900px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: -200px;
-    z-index: -9;
+    z-index: -2;
 }
 
 
 /* Section 2 */
 
 .section2 {
-    background-color: white;
+    height: 100%;
+    z-index: -99;
+    position: relative;
+    overflow: hidden;
 }
 
 .skills {
@@ -124,6 +137,7 @@
     justify-content: center;
     align-items: center;
     gap: 10rem;
+    padding: 0 3rem;
 }
 
 .skills article {
@@ -160,6 +174,15 @@
 
 .right-skills {
     margin-top: 10rem;
+    position: relative;
+}
+
+.right-skills img {
+    position: absolute;
+    width: 250px;
+    right: 10%;
+    transform: translateX(-50%);
+    top: -20px;
 }
 
 /* Section 3 */
@@ -1048,7 +1071,7 @@
     max-width: 520px;
 }
 
-.resume-page{
+.resume-page {
     height: 100vh;
     width: 100%;
 }

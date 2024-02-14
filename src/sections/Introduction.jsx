@@ -1,11 +1,12 @@
 import React from 'react';
 import handsome from "../assets/profile.jpg";
 import particles from "../assets/particles.svg";
+import longparticle from "../assets/longparticle.svg";
 import "../App.css";
 
 function Introduction() {
   return (
-    <section className='section1'>
+    <div className='section1'>
       <div className="presentation-section container">
         <div className="left-presentation">
           <div>
@@ -22,13 +23,15 @@ function Introduction() {
         <div className="right-presentation">
           <div className="handsome">
             <figure>
-              <img src={handsome} alt="a very handsome man" />
+              <img src={handsome} className='handsome-img' alt="a very handsome man" />
               <img className='particles' src={particles} />
             </figure>
           </div>
         </div>
       </div>
-    </section>
+
+      <img src={longparticle} className='longparticle' alt="" />
+    </div>
   )
 }
 

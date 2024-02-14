@@ -58,7 +58,10 @@ function Home() {
             }
         });
 
-        document.documentElement.style.scrollSnapType = 'y mandatory';
+        if (window.innerWidth > 1200) {
+            document.documentElement.style.scrollSnapType = 'y mandatory';
+        }
+
 
         return () => {
             observer.disconnect();
@@ -84,21 +87,21 @@ function Home() {
                 <Skills />
             </section>
 
-            <section id='info'>
+            {/* <section id='info'>
                 <Info />
-            </section>
+            </section> */}
 
-            <section id='shelf'>
+            {/* <section id='shelf'>
                 <Shelf />
-            </section>
+            </section> */}
 
-            <section id='contact'>
+            {/* <section id='contact'>
                 <Contact />
-            </section>
+            </section> */}
 
-            <section id='footer'>
+            {/* <section id='footer'>
                 <Footer />
-            </section>
+            </section> */}
 
 
             <div className='nav-dots'>

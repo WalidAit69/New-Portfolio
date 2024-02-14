@@ -2,6 +2,7 @@ header {
     width: 100%;
     position: fixed;
     left: 50%;
+    top: 0;
     transform: translateX(-50%);
     z-index: 9999;
 }
@@ -13,6 +14,7 @@ header {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    padding: 0 5rem;
 }
 
 .header-blur {
@@ -81,7 +83,7 @@ header h1 {
     display: flex;
     align-items: center;
     position: absolute;
-    right: -30px;
+    right: 45px;
     top: 0;
     transition: .3s ease-in-out;
     z-index: 9998;
@@ -178,6 +180,7 @@ header h1 {
     gap: 2.5rem;
     width: 130px;
     cursor: default;
+    margin-left: 1rem;
 }
 
 .logo * {
@@ -190,18 +193,17 @@ header h1 {
     width: 65px;
     transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
     z-index: 99;
-    margin-left: 1.6rem;
 }
 
 .logo .logo-child1 {
     position: absolute;
-    left: 0;
+    left: -25px;
     top: -2px;
 }
 
 .logo .logo-child2 {
     position: absolute;
-    right: 0;
+    right: 25px;
     top: -2px;
 }
 
@@ -229,4 +231,79 @@ header h1 {
     to {
         stroke-dashoffset: 0;
     }
+}
+
+
+@media (max-width:1024px) {
+    .menu-icon::before {
+        height: 2.5px;
+        width: 40px;
+        background-color: var(--primary-color);
+    }
+
+    .menu-icon::after {
+        height: 2.5px;
+        width: 30px;
+        background-color: var(--primary-color);
+    }
+}
+
+@media (max-width:600px) {
+    .header {
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+
+    .menu {
+        font-size: 1.1rem;
+        right: 0;
+        top: -32px;
+    }
+
+    .menu-open {
+        height: 110vh;
+        width: 100%;
+        transition: .3s ease-in-out;
+    }
+
+    .menu .menu-items {
+        gap: 5rem;
+        padding: 1rem 4rem;
+    }
+
+    .menu .menu-items ul {
+        gap: 2rem;
+    }
+}
+
+@media (max-width:400px) {
+    .menu .menu-items {
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .logo{
+        margin-left: 0;
+    }
+
+    .logo svg {
+        width: 50px;
+        margin-left: 1.5rem;
+    }
+
+    .logo .logo-child1 {
+        position: absolute;
+        left: 0;
+        top: -3px;
+    }
+
+    .logo .logo-child2 {
+        position: absolute;
+        right: 20px;
+        top: -3px;
+    }
+
 }

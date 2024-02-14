@@ -1,0 +1,319 @@
+/* =========================================== */
+/* ================ Home page ================ */
+/* =========================================== */
+@media (max-width:1500px) {
+    .nav-dots {
+        right: 40px;
+    }
+}
+
+/* Section 1 */
+
+@media (max-width:1700px) {
+    .handsome .particles {
+        width: 800px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -60px;
+        z-index: -2;
+    }
+}
+
+@media (max-width:1300px) {
+    .presentation-section {
+        gap: 1rem;
+    }
+
+    .left-presentation div:nth-child(1) h1 {
+        font-size: 3rem;
+    }
+
+    .left-presentation div:nth-child(1) span::after {
+        width: 10px;
+        height: 10px;
+        bottom: 19px;
+    }
+
+    .left-presentation div:nth-child(1) h2 {
+        font-size: 1.3rem;
+        max-width: 450px;
+    }
+
+    .left-presentation div:nth-child(2) p {
+        font-size: .9rem;
+    }
+
+    .left-presentation div:nth-child(2) {
+        display: flex;
+        gap: 2rem;
+        margin-top: 5rem;
+        max-width: 450px;
+    }
+
+    .handsome .handsome-img {
+        width: 400px;
+    }
+
+    .handsome::after {
+        height: 400px;
+        width: 400px;
+        top: 30px;
+        right: 50px;
+    }
+
+    .handsome .particles {
+        width: 600px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+        z-index: -2;
+    }
+}
+
+@media (max-width:1024px) {
+    .home .section1 {
+        background: linear-gradient(180deg, #4831d4 65%, #ccf381 35%);
+    }
+
+    .presentation-section {
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+        padding-bottom: 1.5rem;
+    }
+
+    .left-presentation {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        gap: 4rem;
+        width: 100%;
+        padding-top: 4rem;
+    }
+
+    .left-presentation div:nth-child(1) h1 {
+        margin: 0;
+    }
+
+    .right-presentation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .handsome .handsome-img {
+        width: 300px;
+    }
+
+    .handsome::after {
+        height: 300px;
+        width: 300px;
+        border: 1.5px solid white;
+    }
+
+    .handsome .particles {
+        width: 400px;
+        transform: translateY(-45%);
+        right: -20px;
+    }
+
+    .section1 .longparticle {
+        display: none;
+    }
+
+    .nav-dots {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .presentation-section {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 2rem;
+    }
+
+    .left-presentation {
+        padding: 0;
+    }
+
+    .left-presentation div:nth-child(1) h1 {
+        font-size: 2.5rem;
+    }
+
+    .left-presentation div:nth-child(1) span::after {
+        bottom: 15px;
+    }
+
+    .left-presentation div:nth-child(1) h2 {
+        font-size: 1.1rem;
+    }
+
+    .left-presentation div:nth-child(2) p {
+        font-size: .8rem;
+    }
+
+    .handsome .handsome-img {
+        width: 270px;
+    }
+
+    .handsome::after {
+        height: 270px;
+        width: 270px;
+    }
+
+    .handsome .particles {
+        width: 450px;
+    }
+}
+
+@media (max-width:450px) {
+    .left-presentation div:nth-child(2) {
+        gap: 0;
+        max-width: 100%;
+        flex-direction: column;
+    }
+
+    .handsome::after {
+        right: 20px;
+        top: 35px;
+    }
+
+    .left-presentation div:nth-child(1) h1 {
+        font-size: 2rem;
+    }
+
+    .left-presentation div:nth-child(1) span::after {
+        bottom: 13px;
+    }
+
+    .left-presentation div:nth-child(1) h2 {
+        font-size: 1rem;
+    }
+
+    .left-presentation div:nth-child(2) p {
+        font-size: .75rem;
+    }
+
+    .handsome .particles {
+        top: 0;
+        right: 50%;
+    }
+
+    .right-presentation {
+        height: 60%;
+        align-items: center;
+    }
+
+    .handsome .handsome-img {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .handsome::after {
+        height: 200px;
+        width: 250px;
+    }
+
+    .handsome figure {
+        margin: 0;
+    }
+}
+
+@media (max-height:900px) and (max-width:1000px) {
+    .left-presentation {
+        padding-top: 3rem;
+    }
+
+    .left-presentation div:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .right-presentation {
+        height: 60%;
+        align-items: center;
+    }
+
+    .handsome .handsome-img {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .handsome::after {
+        height: 200px;
+        width: 250px;
+    }
+
+}
+
+@media (max-height:800px) and (max-width:1000px) {
+    .left-presentation {
+        padding-top: 0rem;
+    }
+}
+
+@media (max-height:700px) and (max-width:1000px) {
+    .left-presentation {
+        gap: 2rem;
+    }
+}
+
+/* Section 2 */
+@media (max-width:1024px) {
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem;
+        padding: 0 3rem;
+    }
+
+    .left-skills {
+        margin: 0rem;
+        z-index: 999;
+    }
+
+    .right-skills {
+        margin: 0rem;
+    }
+
+    .left-skills img {
+        width: 200px;
+        top: 0;
+        z-index: -99;
+    }
+
+    .right-skills img {
+        width: 200px;
+        right: 50%;
+        top: 200px;
+    }
+}
+
+@media (max-width:600px) {
+    .skills h1 {
+        font-size: 3rem;
+    }
+
+    .skills p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:400px) {
+    .skills h1 {
+        font-size: 2.3rem;
+    }
+
+    .skills p {
+        font-size: .9rem;
+    }
+
+    .skills {
+        gap: 5rem;
+        padding: 0 1rem;
+    }
+}
