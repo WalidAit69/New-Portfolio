@@ -235,25 +235,17 @@ header h1 {
 
 
 @media (max-width:1024px) {
-    .menu-icon::before {
-        height: 2.5px;
-        width: 40px;
-        background-color: var(--primary-color);
+    .header {
+        margin: 0;
     }
 
-    .menu-icon::after {
-        height: 2.5px;
-        width: 30px;
-        background-color: var(--primary-color);
+    .menu {
+        right: 60px;
+        top: 15px;
     }
 }
 
-@media (max-width:600px) {
-    .header {
-        padding: 0 2rem;
-        margin: 0 auto;
-    }
-
+@media (max-width:800px) {
     .menu {
         font-size: 1.1rem;
         right: 0;
@@ -276,6 +268,13 @@ header h1 {
     }
 }
 
+@media (max-width:600px) {
+    .header {
+        padding: 0 2rem;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width:400px) {
     .menu .menu-items {
         padding: 1rem 2rem;
@@ -285,7 +284,7 @@ header h1 {
         font-size: 2rem;
     }
 
-    .logo{
+    .logo {
         margin-left: 0;
     }
 

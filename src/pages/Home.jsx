@@ -19,31 +19,26 @@ function Home() {
 
     const handleIntersect = (entries, observer) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                setActiveSection(entry.target.id);
-                if (entry.target.id === 'info' || entry.target.id === 'footer') {
+            const { isIntersecting, target } = entry;
+            if (isIntersecting) {
+                setActiveSection(target.id);
+                if (target.id === 'introduction' && window.innerWidth < 1024) {
                     setColorChange(true);
+                    setLogoChange(false);
+                } else if (target.id === 'info' || target.id === 'footer') {
+                    setColorChange(true);
+                    setLogoChange(false);
+                } else if (target.id === 'skills' || target.id === 'shelf' || target.id === 'contact') {
+                    setLogoChange(true);
+                    setColorChange(false);
                 } else {
                     setColorChange(false);
-                }
-            }
-            if (entry.isIntersecting) {
-                setActiveSection(entry.target.id);
-                if (entry.target.id === 'skills' || entry.target.id === 'shelf' || entry.target.id === 'contact') {
-                    setLogoChange(true);
-                } else {
                     setLogoChange(false);
                 }
             }
         });
     };
 
-    useEffect(() => {
-        setisHome(true);
-        setisResume(false);
-        document.title = 'Walid Ait Harma: Fullstack Developer'
-
-    }, [])
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersect, {
@@ -76,6 +71,14 @@ function Home() {
         }
     };
 
+    useEffect(() => {
+        setisHome(true);
+        setisResume(false);
+        document.title = 'Walid Ait Harma: Fullstack Developer'
+
+    }, [])
+
+
     return (
         <main className='home' id='home'>
 
@@ -91,17 +94,17 @@ function Home() {
                 <Info />
             </section> */}
 
-            {/* <section id='shelf'>
+            <section id='shelf'>
                 <Shelf />
-            </section> */}
+            </section>
 
-            {/* <section id='contact'>
+            <section id='contact'>
                 <Contact />
-            </section> */}
+            </section>
 
-            {/* <section id='footer'>
+            <section id='footer'>
                 <Footer />
-            </section> */}
+            </section>
 
 
             <div className='nav-dots'>

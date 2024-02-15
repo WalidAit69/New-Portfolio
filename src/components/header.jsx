@@ -34,44 +34,50 @@ function Header() {
     };
   }, [isMenuOpen]);
 
-  function isScrolledDown() {
-    const scrollTop = window.scrollY;
-    return scrollTop > 0;
-  }
-
-  function handleScrollAnimation() {
-    if (isScrolledDown()) {
-      controls.start({ x: 50 })
-      controls2.start({ x: -50 })
-
-      controls.start({ display: "none", transition: { delay: .3 } })
-      controls2.start({ display: "none", transition: { delay: .3 } })
-    } else {
-      controls.start({ x: 0 })
-      controls2.start({ x: 0 })
-
-      controls.start({ display: "block" })
-      controls2.start({ display: "block" })
+  useEffect(() => {
+    function isScrolledDown() {
+      const scrollTop = window.scrollY;
+      return scrollTop > 0;
     }
-  };
 
-  window.addEventListener('load', function () {
-    handleScrollAnimation();
-  });
+    function handleScrollAnimation() {
+      if (isScrolledDown()) {
+        controls.start({ x: 50 })
+        controls2.start({ x: -50 })
 
-  window.addEventListener('scroll', handleScrollAnimation);
+        controls.start({ display: "none", transition: { delay: .3 } })
+        controls2.start({ display: "none", transition: { delay: .3 } })
+      } else {
+        controls.start({ x: 0 })
+        controls2.start({ x: 0 })
+
+        controls.start({ display: "block" })
+        controls2.start({ display: "block" })
+      }
+    };
+
+    window.addEventListener('load', function () {
+      handleScrollAnimation();
+    });
+
+    window.addEventListener('scroll', function () {
+      handleScrollAnimation();
+    });
+
+
+  }, [])
 
 
   return (
     <>
-      {!isResume && <header className={`${!isHome && 'header-blur'}`}>
+      {!isResume && <header className={`${!isHome || window.innerWidth < 1024 ? 'header-blur' : ''}`}>
         <div className="header">
           <Link to={'/'}>
             <h1 className={`logo ${logoChange && 'logo-purple'} ${!isHome && 'logo-green'}`}>
               <svg version="1.1" className='animated-svg' id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                width="100%" viewBox="0 0 544 448" enable-background="new 0 0 544 448" xml:space="preserve">
-                <path className={`draw`} opacity="1.000000" fill='none' stroke={`${!isHome ? '#ccf381' : logoChange ? '#4831d4' : '#ccf381'}`} stroke-width="20" stroke-miterlimit="10"
+                xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="100%" viewBox="0 0 544 448" enableBackground="new 0 0 544 448" xmlSpace="preserve">
+                <path className={`draw`} opacity="1.000000" fill='none' stroke={`${!isHome ? '#ccf381' : logoChange ? '#4831d4' : '#ccf381'}`} strokeWidth="20" strokeMiterlimit="10"
                   d="M377.677155,278.764008 
             C361.988983,251.662964 346.296143,224.564651 330.614075,197.460068 
             C316.600525,173.239288 302.594116,149.014374 288.597565,124.783768 
@@ -114,9 +120,12 @@ function Header() {
                 whileInView={{ y: 0, opacity: 1 }}
                 initial={{ y: 20, opacity: 0 }}
               >
-                <Link to={'/work'}>
+                {isHome ? <Link to={'/work'}>
                   <li onClick={closeMenu}>My Work</li>
-                </Link>
+                </Link> :
+                  <Link to={'/'}>
+                    <li onClick={closeMenu}>Home</li>
+                  </Link>}
                 <li onClick={closeMenu}>My Shelf</li>
 
                 <a href={'/resume'} target='_blank'>

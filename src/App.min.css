@@ -135,10 +135,6 @@
         padding: 0 2rem;
     }
 
-    .left-presentation {
-        padding: 0;
-    }
-
     .left-presentation div:nth-child(1) h1 {
         font-size: 2.5rem;
     }
@@ -170,6 +166,15 @@
 }
 
 @media (max-width:450px) {
+    .left-presentation {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .left-presentation div:nth-child(2) {
+        margin-top: 0;
+    }
+
     .left-presentation div:nth-child(2) {
         gap: 0;
         max-width: 100%;
@@ -182,7 +187,7 @@
     }
 
     .left-presentation div:nth-child(1) h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     .left-presentation div:nth-child(1) span::after {
@@ -190,11 +195,11 @@
     }
 
     .left-presentation div:nth-child(1) h2 {
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     .left-presentation div:nth-child(2) p {
-        font-size: .75rem;
+        font-size: .7rem;
     }
 
     .handsome .particles {
@@ -203,8 +208,8 @@
     }
 
     .right-presentation {
-        height: 60%;
         align-items: center;
+        margin-top: 2rem;
     }
 
     .handsome .handsome-img {
@@ -223,44 +228,6 @@
     }
 }
 
-@media (max-height:900px) and (max-width:1000px) {
-    .left-presentation {
-        padding-top: 3rem;
-    }
-
-    .left-presentation div:nth-child(2) {
-        margin-top: 0;
-    }
-
-    .right-presentation {
-        height: 60%;
-        align-items: center;
-    }
-
-    .handsome .handsome-img {
-        width: 250px;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .handsome::after {
-        height: 200px;
-        width: 250px;
-    }
-
-}
-
-@media (max-height:800px) and (max-width:1000px) {
-    .left-presentation {
-        padding-top: 0rem;
-    }
-}
-
-@media (max-height:700px) and (max-width:1000px) {
-    .left-presentation {
-        gap: 2rem;
-    }
-}
 
 /* Section 2 */
 @media (max-width:1024px) {
@@ -268,7 +235,7 @@
         display: flex;
         flex-direction: column;
         gap: 10rem;
-        padding: 0 3rem;
+        padding: 5rem 3rem;
     }
 
     .left-skills {
@@ -314,6 +281,174 @@
 
     .skills {
         gap: 5rem;
-        padding: 0 1rem;
+        padding: 5rem 1rem;
     }
 }
+
+
+/* Section 4 */
+@media (max-width:1024px) {
+    .section4 {
+        padding: 3rem 0;
+    }
+
+    .shelf .shelf-container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .shelf-container .left-shelf:nth-child(1) {
+        border-bottom: 1px solid var(--secondary-color);
+        border-right: none;
+    }
+}
+
+@media (max-width:700px) {
+    .shelf-container div * {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .shelf-container div h1 {
+        font-size: 2.5rem;
+    }
+
+    .shelf-container div p {
+        font-size: 1.2rem;
+    }
+
+    .shelf-btn {
+        height: 55px;
+        font-size: .9rem;
+    }
+}
+
+@media (max-width:450px) {
+    .shelf .shelf-container {
+        margin: 0;
+    }
+
+    .shelf-container div h1 {
+        font-size: 2rem;
+    }
+
+    .shelf-container div p {
+        font-size: 1rem;
+    }
+
+    .shelf-btn {
+        font-size: .8rem;
+    }
+}
+
+
+/* section 5*/
+
+@media (max-width:1024px) {
+    .contact {
+        padding: 5rem 0;
+    }
+
+    .contact form {
+        gap: 2.5rem;
+        width: 90%;
+    }
+
+    .contact form .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width:700px) {
+    .contact .title {
+        margin: 0 2rem;
+    }
+
+    .contact .title h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact .title p {
+        font-size: 1.2rem;
+    }
+
+    .contact .shelf-btn {
+        width: 55%;
+    }
+}
+
+@media (max-width:500px) {
+    .contact .title {
+        margin: 0 1rem;
+    }
+
+    .contact .title h1 {
+        font-size: 2rem;
+    }
+
+    .contact .title p {
+        font-size: 1rem;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .contact .shelf-btn {
+        width: 55%;
+    }
+
+    .contact form {
+        width: 95%;
+    }
+}
+
+
+/* =========================================== */
+/* ================ Work page ================ */
+/* =========================================== */
+
+@media (max-width:1400px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:900px) {
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:500px) {
+    .cards-container {
+        width: 90%;
+    }
+
+    .work-card {
+        width: 100%;
+    }
+
+    .work-card img {
+        height: 125px;
+    }
+
+    .work-card .work-card-info {
+        height: fit-content;
+        padding: 1.5rem;
+    }
+
+    .work-card .work-card-info span {
+        font-size: 1.3rem;
+    }
+
+    .work-card .work-card-info a {
+        font-size: .9rem;
+    }
+}
+
+/* =========================================== */
+/* ================ Workdeatails page ================ */
+/* =========================================== */
+
+/* landing section */

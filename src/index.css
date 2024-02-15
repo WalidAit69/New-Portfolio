@@ -37,8 +37,8 @@ a {
     color: inherit;
 }
 
-@media (max-height:700px) and (max-width:1000px) {
+@media (max-width:1024px) {
     .home section {
-        height: 130vh;
+        height: auto;
     }
 }

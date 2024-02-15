@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function WorkCard({ image, title, link }) {
     return (
-        <div className='work-card'>
+        <div className='work-card flex-item'>
             <Link to={`/work/${title}`} className='work-card-img'>
                 <img src={image} alt="mercedes-logo" />
             </Link>

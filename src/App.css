@@ -239,8 +239,9 @@
 .shelf .shelf-container {
     display: flex;
     width: 100%;
-    height: 55%;
+    height: 650px;
     background-color: white;
+    margin: 0 2rem;
 }
 
 .shelf-container .left-shelf:nth-child(1) {
@@ -248,8 +249,12 @@
 }
 
 .shelf-container div {
-    width: 50%;
+    width: 100%;
     padding: 1.5rem 2.5rem;
+}
+
+.shelf-container div * {
+    max-width: 450px;
 }
 
 .shelf-container div h1 {
@@ -535,7 +540,7 @@
     display: grid;
     gap: 4rem;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 4rem;
+    margin: 4rem 2rem 0 2rem;
 }
 
 
@@ -552,7 +557,7 @@
 
 .WorkDetail .work-container {
     position: relative;
-    height: 75vh;
+    height: 100vh;
 }
 
 .workdetail-particle1 {
