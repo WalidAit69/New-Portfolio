@@ -48,6 +48,7 @@ function WorkDetail() {
 
     const controls = useAnimation();
     const controls2 = useAnimation();
+    const controls3 = useAnimation();
     const { scrollYProgress } = useScroll();
 
 
@@ -55,11 +56,20 @@ function WorkDetail() {
         const handleScroll = async () => {
             const trigger = scrollYProgress.get();
 
-            if (trigger > 0.1) {
+            if (trigger > 0.1 && window.innerWidth > 800) {
                 controls.start({ width: '85%', height: '80vh', borderRadius: '0', position: "static" });
                 controls2.start({ borderRadius: '0' });
-            } else {
+            } else if (trigger > 0.1 && window.innerWidth < 800) {
+                controls.start({ width: '90%', height: '50vh', borderRadius: '0', position: "static" });
+                controls2.start({ borderRadius: '0' });
+            } else if (trigger < 0.1 && window.innerWidth > 1200) {
                 controls.start({ width: '350px', height: '150px', borderRadius: '100px' });
+                controls2.start({ borderRadius: '100px' });
+                controls.start({
+                    position: "absolute", transition: { delay: 0.5 }
+                });
+            } else {
+                controls.start({ width: '250px', height: '120px', borderRadius: '100px' });
                 controls2.start({ borderRadius: '100px' });
                 controls.start({
                     position: "absolute", transition: { delay: 0.5 }
@@ -73,6 +83,24 @@ function WorkDetail() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [controls, scrollYProgress]);
+
+    useEffect(() => {
+        const updateTrigger = () => {
+            const trigger = scrollYProgress.get();
+            if (window.innerWidth > 800 || (window.innerWidth < 800 && trigger > 0)) {
+                controls3.start({ scale: 1 });
+            }
+        };
+
+        window.addEventListener('scroll', updateTrigger);
+
+        updateTrigger();
+
+        return () => {
+            window.removeEventListener('scroll', updateTrigger);
+        };
+    }, []);
+
 
     return (
         <main className='WorkDetail'>
@@ -109,13 +137,13 @@ function WorkDetail() {
 
                         <motion.img
                             initial={{ scale: 2 }}
-                            animate={{ scale: 1 }}
+                            whileInView={{ scale: 1 }}
                             transition={{ duration: 15, ease: 'easeInOut' }}
                             id='img1' src={singleCard?.gallery[0]} alt="" />
 
                         <motion.img
-                            initial={{ scale: 1 }}
-                            animate={{ scale: 2 }}
+                            initial={{ scale: 2 }}
+                            whileInView={{ scale: 1 }}
                             transition={{ duration: 7, ease: 'easeInOut' }}
                             onAnimationComplete={handleAnimationComplete}
                             id='img2' src={singleCard?.gallery[1]} alt="" />

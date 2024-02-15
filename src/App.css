@@ -768,16 +768,26 @@
 
 
 /* other projects section */
-.other-projects {}
 
 .other-projects img {
     border-radius: 30px;
     width: 100%;
     z-index: 2;
     cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
-.other-projects img:hover {}
+.other-projects img:hover {
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.other-projects-img-container img:hover {
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    transition: .3s ease-in-out;
+}
 
 .other-projects-container {
     width: 100%;

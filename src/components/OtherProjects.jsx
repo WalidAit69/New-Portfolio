@@ -30,38 +30,36 @@ function OtherProjects() {
     }, []);
 
 
-    console.log(scrollProgress)
-
     return (
         <>
             <section className='other-projects'>
                 <div className='other-projects-container'>
                     <div className='other-projects-img-container'>
                         <motion.img
-                            style={{ x: `${scrollProgress * -5}px`, rotate: `${scrollProgress * -2}deg` }}
+                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -5}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -2}deg` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -20}px` }), }}
                             transition={{ ease: easeInOut }}
                             src={img} alt="" />
                         <motion.img
-                            style={{ x: `${scrollProgress * -10}px`, rotate: `${scrollProgress * -1}deg`, y: `${scrollProgress * -20}px` }}
+                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -1}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -20}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -10}px` }), }}
                             transition={{ ease: easeInOut }}
                             src={img} alt="" />
                         <motion.img
-                            style={{ x: `${scrollProgress * -10}px`, rotate: `${scrollProgress * -.5}deg`, y: `${scrollProgress * -30}px` }}
+                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -.5}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -30}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -5}px` }), }}
                             transition={{ ease: easeInOut }}
                             src={img} alt="" />
                     </div>
 
                     <div className='other-projects-img-container'>
                         <motion.img
-                            style={{ x: `${scrollProgress * 5}px`, rotate: `${scrollProgress * 2}deg` }}
+                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 5}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * 2}deg` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 20}px` }), }}
                             transition={{ ease: easeInOut }}
                             src={img} alt="" />
                         <motion.img
-                            style={{ x: `${scrollProgress * 10}px`, rotate: `${scrollProgress * 1}deg`, y: `${scrollProgress * -20}px` }}
+                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * 1}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -20}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 10}px` }), }}
                             transition={{ ease: easeInOut }}
                             src={img} alt="" />
                         <motion.img
-                            style={{ x: `${scrollProgress * 10}px`, rotate: `${scrollProgress * .5}deg`, y: `${scrollProgress * -30}px` }}
+                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * .5}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -30}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 5}px` }), }}
                             transition={{ ease: easeInOut }}
                             src={img} alt="" />
                     </div>

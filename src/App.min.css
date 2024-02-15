@@ -452,3 +452,131 @@
 /* =========================================== */
 
 /* landing section */
+
+@media (max-width:1200px) {
+
+    .workdetail-particle1 img,
+    .workdetail-particle2 img {
+        width: 250px;
+    }
+
+    .WorkDetail .work-container .work-title h1 {
+        font-size: 4rem;
+    }
+
+    .WorkDetail .work-container .work-title h3 {
+        font-size: 1rem;
+    }
+
+    .WorkDetail .workdetail-cta .workdetail-btn:nth-child(1) {
+        left: 10%;
+    }
+
+    .WorkDetail .workdetail-cta .workdetail-btn:nth-child(2) {
+        right: 8%;
+    }
+
+    .WorkDetail .workdetail-img {
+        position: absolute;
+        width: 250px;
+        height: 120px;
+        border-radius: 100px;
+        transition: .5s ease-in-out;
+        margin-bottom: 1rem;
+    }
+
+    .WorkDetail .workdetail-cta .workdetail-btn:nth-child(1) {
+        left: 5%;
+    }
+
+    .WorkDetail .workdetail-cta .workdetail-btn:nth-child(2) {
+        right: 5%;
+    }
+
+    .workdetail-bottom-title span {
+        font-size: 8rem;
+    }
+
+    .workdetail-bottom-descpription p {
+        font-size: 1.5rem;
+    }
+
+    .WorkFeature span {
+        font-size: 4rem;
+    }
+
+    .WorkFeature p {
+        font-size: 1.7rem;
+    }
+
+    .WorkFeature .workdetail-btn {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .WorkFeature span {
+        font-size: 3rem;
+    }
+
+    .WorkFeature p {
+        font-size: 1.5rem;
+    }
+
+    .WorkFeature .workdetail-btn {
+        font-size: .9rem;
+        padding: .8rem 1.5rem;
+    }
+
+    .other-projects-container {
+        gap: 2rem;
+    }
+
+    .other-projects-img-container {
+        width: 100%;
+    }
+
+    .other-projects-img-container img {}
+}
+
+@media (max-width:900px) {
+    .workdetail-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .WorkFeature {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .left-WorkFeature {
+        width: 100%;
+    }
+
+    .right-WorkFeature {
+        width: 100%;
+    }
+}
+
+@media (max-width:800px) {
+    .workdetail-slider {
+        align-items: start;
+    }
+
+    .other-projects-container {
+        gap: 0;
+    }
+}
+
+@media (max-width:500px) {
+    .other-projects-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .other-projects-title {
+        display: none;
+    }
+}
