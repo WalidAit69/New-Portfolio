@@ -852,6 +852,10 @@
     padding: 1.5rem 2.5rem;
 }
 
+.resume-meta .resume-mail{
+    display: none;
+}
+
 .resume-meta div,
 .resume-meta a {
     display: flex;
@@ -879,7 +883,7 @@
     height: 100%;
     width: 100%;
     align-items: flex-end;
-    padding-left: 9rem;
+    padding-left: 4rem;
 }
 
 .resume-logo .logo {

@@ -3,6 +3,8 @@ import useHeaderStore from '../store/headerStore';
 import { MdOutlineDownloading } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { CiMail } from "react-icons/ci";
+
 
 function Resume() {
 
@@ -20,6 +22,9 @@ function Resume() {
             <aside className='resume-meta'>
                 <a href="https://www.linkedin.com/in/walidaitharma/" target='_blank'>
                     <FaLinkedin color='#4831d4' />
+                </a>
+                <a className='resume-mail' href="mailto:aitwalid2000@gmail.com">
+                    <CiMail size={20}/>
                 </a>
                 <Link to={'/resume.pdf'}>
                     <MdOutlineDownloading />

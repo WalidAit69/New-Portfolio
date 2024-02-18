@@ -580,3 +580,187 @@
         display: none;
     }
 }
+
+
+/* =========================================== */
+/* ================ Resume page ================ */
+/* =========================================== */
+
+@media (max-width:1400px) {
+    .resume-container {
+        background-color: rgb(245, 245, 245);
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width:1200px) {
+    .edu-title {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: .5rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .resume-meta .resume-mail {
+        display: flex;
+    }
+
+    .resume {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-skills {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .resume-info {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .resume-info-container {
+        padding-left: 0;
+    }
+
+    .resume-tech ul {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .resume-tech ul li:not(:last-of-type)::after {
+        content: ",";
+        margin-left: .2rem;
+    }
+
+    .resume-info p,
+    .resume-info ul li {
+        color: gray;
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .resume-contact {
+        display: none;
+    }
+
+    .resume-logo {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+    }
+
+    .resume-logo .logo {
+        margin: 0;
+    }
+}
+
+@media (max-width:600px) {
+    .resume-header h1 {
+        font-size: 3rem;
+    }
+
+    .resume-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .resume-skills {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .resume-tech h2 {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .resume-tech ul li {
+        font-size: .9rem;
+    }
+
+    .resume-info p,
+    .resume-info ul li {
+        font-size: 1rem;
+    }
+
+    .edu-title span.edu-h1 {
+        font-size: 1.2rem;
+    }
+
+    .edu-title span.edu-h2 {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:450px) {
+    .resume-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .resume-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .resume-tech h2 {
+        font-size: 1.1rem;
+    }
+
+    .resume-tech ul li {
+        font-size: .8rem;
+    }
+
+    .resume-info p,
+    .resume-info ul li {
+        font-size: .9rem;
+    }
+
+    .edu-title span.edu-h1 {
+        font-size: 1.1rem;
+    }
+
+    .edu-title span.edu-h2 {
+        font-size: .9rem;
+    }
+
+    .edu-title div {
+        display: flex;
+        align-items: start;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .edu-title span.edu-h2::before {
+        width: 0;
+        height: 0;
+    }
+
+    .resume-logo {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+    }
+}
+
+@media (max-width:400px) {
+    .resume-logo .logo {
+        font-size: 2rem;
+    }
+
+    .resume-logo{
+        padding-left: 2rem;
+    }
+}
