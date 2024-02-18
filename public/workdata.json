@@ -1,7 +1,7 @@
 [
   {
     "id": "1",
-    "image": "/src/assets/mercedes-logo.png",
+    "image": "/mercedes-logo.png",
     "title": "Mercedes-Benz",
     "link": "https://mercedes-benz-seven.vercel.app",
     "gallery": {
