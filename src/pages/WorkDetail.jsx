@@ -17,7 +17,7 @@ function WorkDetail() {
 
     const fetchData = async (cardTitle) => {
         try {
-            const response = await axios.get('../src/store/workdata.json');
+            const response = await axios.get('/workdata.json');
             const cards = response.data;
 
             setsingleCard(cards.find((card) => card.title === cardTitle));

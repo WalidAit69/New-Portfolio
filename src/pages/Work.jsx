@@ -17,7 +17,7 @@ function Work() {
 
         const fetchData = async () => {
             try {
-                const response = await axios.get('../src/store/workdata.json');
+                const response = await axios.get('/workdata.json');
                 setworkcards(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
