@@ -44,7 +44,14 @@
     align-items: center;
 }
 
-.left-presentation div:nth-child(1) h1 {
+.left-presentation .h1title {
+    position: relative;
+    overflow: hidden;
+    height: 190px;
+}
+
+.left-presentation div:nth-child(1) h1,
+.left-presentation div:nth-child(1) span {
     color: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -52,10 +59,16 @@
     letter-spacing: 2px;
     font-weight: 900;
     width: fit-content;
+    margin: 0;
+    position: absolute;
 }
 
-.left-presentation div:nth-child(1) span {
-    position: relative;
+.left-presentation div:nth-child(1) h1 {
+    top: 170px;
+}
+
+.left-presentation div:nth-child(1) .h1span {
+    bottom: -80px;
 }
 
 .left-presentation div:nth-child(1) span::after {
@@ -93,21 +106,27 @@
 
 .handsome {
     position: relative;
+    width: 500px;
+    height: 470px;
 }
 
 .handsome .handsome-img {
-    width: 450px;
+    height: 100%;
+    width: 90%;
     z-index: -1;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
 }
 
 .handsome::after {
     position: absolute;
     content: "";
-    height: 450px;
-    width: 450px;
+    height: 95%;
+    width: 90%;
     border: 3px solid white;
-    top: 40px;
-    right: 0;
+    top: 10%;
+    right: -5%;
     z-index: -2;
 }
 
@@ -852,7 +871,7 @@
     padding: 1.5rem 2.5rem;
 }
 
-.resume-meta .resume-mail{
+.resume-meta .resume-mail {
     display: none;
 }
 

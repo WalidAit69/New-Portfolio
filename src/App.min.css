@@ -25,7 +25,12 @@
         gap: 1rem;
     }
 
-    .left-presentation div:nth-child(1) h1 {
+    .left-presentation .h1title {
+        height: 150px;
+    }
+
+    .left-presentation div:nth-child(1) h1,
+    .left-presentation div:nth-child(1) span {
         font-size: 3rem;
     }
 
@@ -51,15 +56,9 @@
         max-width: 450px;
     }
 
-    .handsome .handsome-img {
+    .handsome {
         width: 400px;
-    }
-
-    .handsome::after {
         height: 400px;
-        width: 400px;
-        top: 30px;
-        right: 50px;
     }
 
     .handsome .particles {
@@ -103,14 +102,8 @@
         justify-content: center;
     }
 
-    .handsome .handsome-img {
-        width: 300px;
-    }
-
-    .handsome::after {
+    .handsome {
         height: 300px;
-        width: 300px;
-        border: 1.5px solid white;
     }
 
     .handsome .particles {
@@ -135,7 +128,12 @@
         padding: 0 2rem;
     }
 
-    .left-presentation div:nth-child(1) h1 {
+    .left-presentation .h1title {
+        height: 120px;
+    }
+
+    .left-presentation div:nth-child(1) h1,
+    .left-presentation div:nth-child(1) span {
         font-size: 2.5rem;
     }
 
@@ -151,17 +149,21 @@
         font-size: .8rem;
     }
 
+    .handsome {
+        height: 250px;
+        margin-top: 5rem;
+    }
+
     .handsome .handsome-img {
-        width: 270px;
+        top: -30px;
     }
 
     .handsome::after {
-        height: 270px;
-        width: 270px;
+        height: 85%;
     }
 
     .handsome .particles {
-        width: 450px;
+        width: 390px;
     }
 }
 
@@ -169,6 +171,10 @@
     .left-presentation {
         display: flex;
         gap: 2rem;
+    }
+
+    .left-presentation .h1title {
+        height: 100px;
     }
 
     .left-presentation div:nth-child(2) {
@@ -181,12 +187,8 @@
         flex-direction: column;
     }
 
-    .handsome::after {
-        right: 20px;
-        top: 35px;
-    }
-
-    .left-presentation div:nth-child(1) h1 {
+    .left-presentation div:nth-child(1) h1,
+    .left-presentation div:nth-child(1) span {
         font-size: 1.9rem;
     }
 
@@ -208,23 +210,12 @@
     }
 
     .right-presentation {
-        align-items: center;
         margin-top: 2rem;
     }
 
     .handsome .handsome-img {
-        width: 250px;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .handsome::after {
-        height: 200px;
-        width: 250px;
-    }
-
-    .handsome figure {
-        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -760,7 +751,7 @@
         font-size: 2rem;
     }
 
-    .resume-logo{
+    .resume-logo {
         padding-left: 2rem;
     }
 }
