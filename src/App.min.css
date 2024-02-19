@@ -527,8 +527,6 @@
     .other-projects-img-container {
         width: 100%;
     }
-
-    .other-projects-img-container img {}
 }
 
 @media (max-width:900px) {

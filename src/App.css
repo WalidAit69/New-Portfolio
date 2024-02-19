@@ -208,37 +208,134 @@
 
 
 .section3 {
-    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
 }
 
-.info {
+.info-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-.left-info h1 {
-    color: var(--primary-color);
+.info-title h1 {
+    color: white;
     font-size: 4rem;
-    width: max-content;
     margin: 0;
-    padding: 0;
+    text-align: center;
 }
 
-.left-info p {
+.info-title p {
     color: white;
+    font-size: 3rem;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 0;
+}
+
+
+.info-title .line1 {
+    transform: scaleY(-1);
+    width: 100px;
+}
+
+.info-title .line2 {
+    rotate: 180deg;
+    width: 100px;
+}
+
+.draw2 {
+    stroke: white;
+    stroke-width: .8px;
+    stroke-dasharray: 500;
+    fill: none;
+}
+
+.info-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.info-video-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 1;
+}
+
+.info-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 5rem;
 }
 
-.right-info img {
-    width: 800px;
+.info-content .infoh1 {
+    font-size: 4.5rem;
+    font-weight: 800;
 }
 
+.info-content .infoh2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.info-content .infoh3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.videocta {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoctabtn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoctabtn svg {
+    width: 40px;
+}
+
+.videoctabtn .play {
+    width: 30px;
+    margin-left: .3rem;
+}
 
 /* Section 4 */
 

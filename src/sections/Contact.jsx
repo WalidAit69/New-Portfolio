@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { PiArrowRightThin } from 'react-icons/pi'
+import { motion } from 'framer-motion'
 
 function Contact() {
 
@@ -17,8 +18,8 @@ function Contact() {
         <section className='section5'>
             <div className="contact container">
                 <div className="title">
-                    <h1>Send me a message!</h1>
-                    <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
+                    <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: 'easeInOut' }}>Send me a message!</motion.h1>
+                    <motion.p initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .2, ease: 'easeInOut' }}>Got a question or proposal, or just want to say hello? Go ahead.</motion.p>
                 </div>
 
                 <form action="">

@@ -90,9 +90,9 @@ function Home() {
                 <Skills />
             </section>
 
-            {/* <section id='info'>
+            <section id='info'>
                 <Info />
-            </section> */}
+            </section>
 
             <section id='shelf'>
                 <Shelf />
