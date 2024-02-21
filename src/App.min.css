@@ -277,6 +277,51 @@
 }
 
 
+/* section 3 */
+
+@media (max-width:1200px) {
+    .videocta {
+        height: 80px;
+        width: 80px;
+    }
+
+    .videoctabtn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .videoctabtn svg {
+        width: 35px;
+    }
+
+    .videoctabtn .play {
+        width: 30px;
+        margin-left: .3rem;
+    }
+}
+
+@media (max-width:1024px) {
+    .section3 {
+        height: 100vh !important;
+    }
+    
+    .videoctabtn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .videoctabtn .play {
+        width: 30px;
+        margin-left: .3rem;
+    }
+}
+
+@media (max-width:800px) {
+    .info-content {
+        gap: .5rem;
+    }
+}
+
 /* Section 4 */
 @media (max-width:1024px) {
     .section4 {

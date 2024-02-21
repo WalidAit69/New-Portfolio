@@ -220,13 +220,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+
 }
 
 .info-title h1 {
     color: white;
     font-size: 4rem;
     margin: 0;
-    text-align: center;
 }
 
 .info-title p {
@@ -285,20 +286,22 @@
     justify-content: center;
     color: white;
     margin-top: 5rem;
+    text-align: center;
+    gap: .5rem;
 }
 
 .info-content .infoh1 {
-    font-size: 4.5rem;
+    font-size: clamp(1.5rem, 1rem + 3vw, 4.5rem);
     font-weight: 800;
 }
 
 .info-content .infoh2 {
-    font-size: 2.5rem;
+    font-size: clamp(1rem , .5rem + 2vw , 2.5rem);
     font-weight: 700;
 }
 
 .info-content .infoh3 {
-    font-size: 1.5rem;
+    font-size: clamp(.8rem , .2rem + 2vw , 1.5rem);
     font-weight: 200;
 }
 
@@ -335,6 +338,12 @@
 .videoctabtn .play {
     width: 30px;
     margin-left: .3rem;
+}
+
+.info-video video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* Section 4 */
