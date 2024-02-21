@@ -74,7 +74,7 @@ function Info() {
 
             <div className='info-video'>
                 <motion.div initial={{ opacity: 1 }} whileInView={{ opacity: .5 }} transition={{ duration: 1, delay: 3.2, ease: 'easeInOut' }} className='info-video-layer'></motion.div>
-                <video ref={videoRef} src={video} autoPlay loop muted></video>
+                <video ref={videoRef} src={video} autoPlay loop muted controls={false}></video>
             </div>
         </section >
     )
