@@ -279,48 +279,119 @@
 
 /* section 3 */
 
+@media (max-width:1500px) {
+    .info {
+        padding-bottom: 5rem;
+    }
+
+    .info-quote {
+        display: flex;
+    }
+
+    .info-container {
+        border: none;
+        margin: 0 4rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 3rem;
+    }
+
+    .info-container .info-card {
+        border: 1px solid white;
+        height: 300px;
+    }
+}
+
 @media (max-width:1200px) {
-    .videocta {
-        height: 80px;
-        width: 80px;
+    .info-quote {
+        display: none;
     }
 
-    .videoctabtn {
-        width: 60px;
-        height: 60px;
-    }
-
-    .videoctabtn svg {
-        width: 35px;
-    }
-
-    .videoctabtn .play {
-        width: 30px;
-        margin-left: .3rem;
+    .info-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width:1024px) {
-    .section3 {
-        height: 100vh !important;
-    }
-    
-    .videoctabtn {
-        width: 50px;
-        height: 50px;
-    }
-
-    .videoctabtn .play {
-        width: 30px;
-        margin-left: .3rem;
+    .info-title {
+        margin-top: 3rem;
     }
 }
 
-@media (max-width:800px) {
-    .info-content {
-        gap: .5rem;
+@media (max-width:900px) {
+    .info h1 {
+        font-size: 3rem;
+    }
+
+    .info-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        gap: 1rem;
+    }
+
+    .info-container .info-card {
+        height: fit-content;
+        max-width: 100%;
+    }
+
+    .info-card-top div {
+        display: flex;
+    }
+
+    .info-card-top span {
+        font-size: 1.8rem;
+    }
+
+    .info-card-bottom {
+        position: relative;
+        margin-top: 4rem;
+        margin-left: 2rem;
+    }
+
+    .info-card-bottom p {
+
+        font-size: 1.2rem;
     }
 }
+
+@media (max-width:400px) {
+    .info h1 {
+        font-size: 2.5rem;
+    }
+
+    .info-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .info-container .info-card {
+        height: fit-content;
+        max-width: 100%;
+        border-left: none !important;
+        border-right: none !important;
+        padding: 2rem;
+    }
+
+    .info-card-top div {
+        display: flex;
+    }
+
+    .info-card-top span {
+        font-size: 1.5rem;
+    }
+
+    .info-card-bottom {
+        position: relative;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+
+    .info-card-bottom p {
+        font-size: 1.1rem;
+    }
+}
+
 
 /* Section 4 */
 @media (max-width:1024px) {
