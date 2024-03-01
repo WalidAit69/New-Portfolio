@@ -11,6 +11,7 @@ function Header() {
 
   const controls = useAnimation();
   const controls2 = useAnimation();
+  const controls3 = useAnimation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -44,12 +45,15 @@ function Header() {
       if (isScrolledDown()) {
         controls.start({ x: 50, opacity: 0 })
         controls2.start({ x: -50, opacity: 0 })
+        controls3.start({ marginLeft: 0 })
 
         controls.start({ display: "none", transition: { delay: .3 } })
         controls2.start({ display: "none", transition: { delay: .3 } })
       } else {
         controls.start({ x: 0, opacity: 1 })
         controls2.start({ x: 0, opacity: 1 })
+        controls3.start({ marginLeft: '1.5rem' })
+
 
         controls.start({ display: "block" })
         controls2.start({ display: "block" })
@@ -74,7 +78,9 @@ function Header() {
         <div className="header">
           <Link to={'/'}>
             <h1 className={`logo ${logoChange && 'logo-purple'} ${!isHome && 'logo-green'}`}>
-              <svg version="1.1" className='animated-svg' id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <motion.svg
+                animate={controls3}
+                transition={{ ease: [0.8, 0, 0, 0.8] }} version="1.1" className='animated-svg' id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="100%" viewBox="0 0 544 448" enableBackground="new 0 0 544 448" xmlSpace="preserve">
                 <path className={`draw`} opacity="1.000000" fill='none' stroke={`${!isHome ? '#ccf381' : logoChange ? '#4831d4' : '#ccf381'}`} strokeWidth="20" strokeMiterlimit="10"
@@ -93,7 +99,7 @@ function Header() {
             C378.800293,342.065369 386.220795,343.695312 392.029602,341.992218 
             C402.033722,339.059082 406.248169,328.789703 400.946167,319.254639 
             C393.499695,305.863007 385.693146,292.671570 377.677155,278.764008"/>
-              </svg>
+              </motion.svg>
               <motion.span
                 initial={{ x: 50, opacity: 0 }}
                 animate={controls}

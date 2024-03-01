@@ -175,12 +175,9 @@ header h1 {
 
 .logo {
     display: flex;
-    align-items: center;
     position: relative;
-    gap: 2.5rem;
     width: 130px;
     cursor: default;
-    margin-left: 1rem;
 }
 
 .logo * {
@@ -193,17 +190,18 @@ header h1 {
     width: 65px;
     transition: .3s cubic-bezier(0.39, 0.575, 0.565, 1) !important;
     z-index: 99;
+    margin-left: 1.5rem;
 }
 
 .logo .logo-child1 {
     position: absolute;
-    left: -25px;
+    left: 0px;
     top: -2px;
 }
 
 .logo .logo-child2 {
     position: absolute;
-    right: 25px;
+    right: 3px;
     top: -2px;
 }
 
