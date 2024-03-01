@@ -558,7 +558,6 @@
 /* ================ Workdeatails page ================ */
 /* =========================================== */
 
-/* landing section */
 
 @media (max-width:1200px) {
 
@@ -600,7 +599,7 @@
         right: 5%;
     }
 
-    .workdetail-bottom-title span {
+    .workdetail-bottom-title {
         font-size: 8rem;
     }
 
@@ -673,6 +672,27 @@
     .other-projects-container {
         gap: 0;
     }
+
+    .WorkDetail .work-container .work-title div {
+        height: 50px;
+        width: 510px;
+    }
+
+    .WorkDetail .work-container .work-title h1 {
+        font-size: 3rem;
+    }
+
+    .workdetail-bottom-title .blend-wrapper {
+        line-height: 6rem;
+    }
+
+    .workdetail-bottom-title {
+        font-size: 6rem;
+    }
+
+    .workdetail-bottom-descpription p {
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width:500px) {
@@ -684,8 +704,58 @@
     .other-projects-title {
         display: none;
     }
+
+    .WorkDetail .work-container .work-title div {
+        height: 100px;
+        max-width: 310px;
+    }
+
+    .WorkDetail .work-container .work-title h1 {
+        font-size: 2rem;
+    }
+
+    .WorkDetail .workdetail-cta .workdetail-btn {
+        font-size: .9rem;
+        padding: .6rem 1.2rem;
+    }
+
+    .workdetail-bottom-descpription {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .workdetail-bottom-descpription a {
+        padding: .6rem 1.3rem;
+        font-size: .8rem;
+    }
+
+    .workdetail-bottom-title {
+        font-size: 5rem;
+    }
+
+    .workdetail-bottom-descpription p {
+        font-size: 1.3rem;
+    }
 }
 
+@media (max-width:400px) {
+    .workdetail-bottom-descpription a {
+        padding: .5rem 1rem;
+        font-size: .75rem;
+    }
+
+    .workdetail-bottom-title .blend-wrapper {
+        line-height: 5rem;
+    }
+
+    .workdetail-bottom-title {
+        font-size: 4rem;
+    }
+
+    .workdetail-bottom-descpription p {
+        font-size: 1.2rem;
+    }
+}
 
 /* =========================================== */
 /* ================ Resume page ================ */

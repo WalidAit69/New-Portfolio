@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from "framer-motion"
 
 function FooterSm({ green }) {
     return (
         <footer>
             <div className={`section6sm ${green ? 'section6green' : 'section6'}`}>
                 <div className='footer container'>
-                    <div className='footer-top'>
+                    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, ease: 'easeInOut' }} className='footer-top'>
                         <div className='footer-top-left'>
                             <p>Say hello</p>
                             <ul>
@@ -22,9 +23,9 @@ function FooterSm({ green }) {
                                 <Link to={'/resume'}>My Resume</Link>
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className='footer-bottom'>
+                    <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .2, ease: 'easeInOut' }} className='footer-bottom'>
                         <p>© Walid Ait Harma 2024</p>
                         <div className='socials'>
                             <a>fb</a>
@@ -32,7 +33,7 @@ function FooterSm({ green }) {
                             <a>yt</a>
                             <a>gh</a>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </footer>)

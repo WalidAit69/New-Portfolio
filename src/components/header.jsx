@@ -42,14 +42,14 @@ function Header() {
 
     function handleScrollAnimation() {
       if (isScrolledDown()) {
-        controls.start({ x: 50 })
-        controls2.start({ x: -50 })
+        controls.start({ x: 50, opacity: 0 })
+        controls2.start({ x: -50, opacity: 0 })
 
         controls.start({ display: "none", transition: { delay: .3 } })
         controls2.start({ display: "none", transition: { delay: .3 } })
       } else {
-        controls.start({ x: 0 })
-        controls2.start({ x: 0 })
+        controls.start({ x: 0, opacity: 1 })
+        controls2.start({ x: 0, opacity: 1 })
 
         controls.start({ display: "block" })
         controls2.start({ display: "block" })
@@ -95,12 +95,12 @@ function Header() {
             C393.499695,305.863007 385.693146,292.671570 377.677155,278.764008"/>
               </svg>
               <motion.span
-                initial={{ x: 50 }}
+                initial={{ x: 50, opacity: 0 }}
                 animate={controls}
                 transition={{ ease: [0.8, 0, 0, 0.8] }}
                 className='logo-child1'>W</motion.span>
               <motion.span
-                initial={{ x: -50 }}
+                initial={{ x: -50, opacity: 0 }}
                 animate={controls2}
                 transition={{ ease: [0.8, 0, 0, 0.8] }}
                 className='logo-child2'>lid</motion.span>

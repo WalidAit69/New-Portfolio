@@ -32,6 +32,7 @@ function WorkDetail() {
     }, [title]);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         setisHome(false);
         setisResume(false);
         document.title = `Walid Ait Harma: ${title}`
@@ -106,13 +107,15 @@ function WorkDetail() {
         <main className='WorkDetail'>
             <section className='work-container'>
                 <div className='work-title'>
-                    <h1><span>{singleCard?.title}</span></h1>
-                    <h3><span>description</span></h3>
+                    <div>
+                        <motion.h1 initial={{ marginTop: '5rem' }} whileInView={{ marginTop: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}><span>{singleCard?.title}</span></motion.h1>
+                    </div>
+                    <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }}><span>description</span></motion.h3>
                 </div>
 
                 <div className='workdetail-cta'>
-                    <a href='' className='workdetail-btn'>Explore Work</a>
-                    <a href='' className='workdetail-btn'>Github Repo</a>
+                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href='' className='workdetail-btn'>Explore Work</motion.a>
+                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href='' className='workdetail-btn'>Github Repo</motion.a>
                 </div>
 
                 <div className="workdetail-particle1">

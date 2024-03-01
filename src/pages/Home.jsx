@@ -72,6 +72,7 @@ function Home() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         setisHome(true);
         setisResume(false);
         document.title = 'Walid Ait Harma: Fullstack Developer'
