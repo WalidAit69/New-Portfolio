@@ -11,7 +11,7 @@ function ResumePage() {
     }, [])
 
     return (
-        <iframe src="/src/assets/resume.pdf" className='resume-page'></iframe>
+        <iframe src="/resume.pdf" className='resume-page'></iframe>
     )
 }
 
