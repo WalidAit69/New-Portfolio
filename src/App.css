@@ -210,7 +210,7 @@
 .section3 {
     position: relative;
     overflow: hidden;
-    background-color: rgb(27, 27, 27);
+    background-color: var(--secondary-color);
 }
 
 .info {
