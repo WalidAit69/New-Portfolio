@@ -2,7 +2,7 @@ import React from 'react';
 import img from "../assets/1.jpg"
 import { motion } from "framer-motion"
 
-function WorkFeature({ reverse, title, desc, image }) {
+function WorkFeature({ reverse, title, desc, image, video }) {
     return (
         <section className={`WorkFeature ${reverse && 'WorkFeaturereverse'}`}>
             <motion.div
@@ -20,13 +20,15 @@ function WorkFeature({ reverse, title, desc, image }) {
                 whileInView={{ x: 0, rotate: 0 }}
                 transition={{ duration: 1, ease: [0.8, 0, 0, 0.8] }}
                 className="right-WorkFeature">
-                <img src={img} alt="" />
+                {image && <img src={image} alt="" />}
+                {video && <video src={video} autoPlay muted loop></video>}
             </motion.div> : <motion.div
                 initial={{ x: -300, rotate: -10 }}
                 whileInView={{ x: 0, rotate: 0 }}
                 transition={{ duration: 1, ease: [0.8, 0, 0, 0.8] }}
                 className="right-WorkFeature">
-                <img src={img} alt="" />
+                {image && <img src={image} alt="" />}
+                {video && <video src={video} autoPlay muted loop></video>}
             </motion.div>}
         </section>
     )

@@ -727,6 +727,9 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .WorkDetail .work-container .work-title span {
@@ -753,6 +756,7 @@
 
 .WorkDetail .work-container .work-title h3 {
     font-weight: normal;
+    max-width: 450px;
 }
 
 .WorkDetail .workdetail-cta .workdetail-btn {
@@ -793,7 +797,8 @@
     overflow: hidden;
 }
 
-.WorkDetail .workdetail-img img {
+.WorkDetail .workdetail-img img,
+.WorkDetail .workdetail-img video {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -806,16 +811,7 @@
     height: 100%;
     width: 0px;
     right: -15%;
-    animation: bgimganimation 2.5s cubic-bezier(0.23, 1, 0.320, 1) 2s;
-}
-
-.workdetail-img-layer2 {
-    background-color: var(--primary-color);
-    position: absolute;
-    height: 100%;
-    width: 0px;
-    right: -15%;
-    animation: bgimganimation 2.5s cubic-bezier(0.23, 1, 0.320, 1) 6s;
+    animation: bgimganimation 2.5s cubic-bezier(0.23, 1, 0.320, 1) 5s;
 }
 
 @keyframes bgimganimation {
@@ -879,11 +875,11 @@
     position: relative;
 }
 
-#blend-text{
+#blend-text {
     position: relative;
 }
 
-.before-project{
+.before-project {
     content: 'Project';
     position: absolute;
     top: 0;
@@ -943,8 +939,10 @@
     width: 65%;
 }
 
-.right-WorkFeature img {
+.right-WorkFeature img,
+.right-WorkFeature video {
     width: 100%;
+    height: 450px;
     object-fit: cover;
     border-radius: 25px;
 }

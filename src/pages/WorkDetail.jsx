@@ -39,10 +39,6 @@ function WorkDetail() {
 
     }, [])
 
-    const handleAnimationComplete = () => {
-        document.getElementById('img2').style.display = 'none';
-    };
-
     const handleAnimationComplete2 = () => {
         document.getElementById('img3').style.display = 'none';
     };
@@ -110,12 +106,12 @@ function WorkDetail() {
                     <div>
                         <motion.h1 initial={{ marginTop: '5rem' }} whileInView={{ marginTop: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}><span>{singleCard?.title}</span></motion.h1>
                     </div>
-                    <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }}><span>description</span></motion.h3>
+                    <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }}><span>{singleCard?.description}</span></motion.h3>
                 </div>
 
                 <div className='workdetail-cta'>
-                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href='' className='workdetail-btn'>Explore Work</motion.a>
-                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href='' className='workdetail-btn'>Github Repo</motion.a>
+                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href={singleCard?.link} target='_blank' className='workdetail-btn'>Explore Work</motion.a>
+                    <motion.a initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href={singleCard?.github} target='_blank' className='workdetail-btn'>Github Repo</motion.a>
                 </div>
 
                 <div className="workdetail-particle1">
@@ -138,38 +134,33 @@ function WorkDetail() {
                         transition={{ duration: 0.1, ease: 'easeInOut' }}
                         className="workdetail-img-container">
 
-                        <motion.img
+                        <motion.video
+                            muted autoPlay loop
                             initial={{ scale: 2 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ duration: 15, ease: 'easeInOut' }}
+                            transition={{ duration: 5, ease: 'easeInOut' }}
                             id='img1' src={singleCard?.gallery[0]} alt="" />
 
-                        <motion.img
-                            initial={{ scale: 2 }}
-                            whileInView={{ scale: 1 }}
-                            transition={{ duration: 7, ease: 'easeInOut' }}
-                            onAnimationComplete={handleAnimationComplete}
-                            id='img2' src={singleCard?.gallery[1]} alt="" />
 
-                        <motion.img
+                        <motion.video
+                            muted autoPlay loop
                             initial={{ scale: 2 }}
                             whileInView={{ scale: 1 }}
-                            transition={{ duration: 3, ease: 'easeInOut' }}
+                            transition={{ duration: 6, ease: 'easeInOut' }}
                             onAnimationComplete={handleAnimationComplete2}
-                            id='img3' src={singleCard?.gallery[2]} alt="" />
+                            id='img3' src={singleCard?.gallery[1]} alt="" />
 
                         <div className="workdetail-img-layer"></div>
-                        <div className="workdetail-img-layer2"></div>
 
                     </motion.div>
                 </motion.div>
             </div>
 
-            <WorkDetailTitle />
+            <WorkDetailTitle link={singleCard?.link} description={singleCard?.shortdesc} />
 
-            <WorkFeature title="loftloom" desc="test" />
-            <WorkFeature reverse={true} title="loftloom" desc="test" />
-            <WorkFeature title="loftloom" desc="test" />
+            <WorkFeature title="Categories" desc="Categories with style" video={singleCard?.gallery[2]} />
+            <WorkFeature reverse={true} title="Beyond" desc="Defining Class" video={singleCard?.gallery[1]} />
+            <WorkFeature title="Menu" desc="Clean animated menu" video={singleCard?.gallery[3]} />
 
             <OtherProjects />
         </main >

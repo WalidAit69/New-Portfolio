@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 
-function WorkDetailTitle() {
+function WorkDetailTitle({ link, description }) {
 
     return (
         <div className='workdetail-bottom-title'>
@@ -25,8 +25,8 @@ function WorkDetailTitle() {
             </motion.div>
 
             <div className='workdetail-bottom-descpription'>
-                <motion.p initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} >description</motion.p>
-                <motion.a initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href="" className='workdetail-btn'>Explore Work</motion.a>
+                <motion.p initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} >{description}</motion.p>
+                <motion.a initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }} href={link} target='_blank' className='workdetail-btn'>Explore Work</motion.a>
             </div>
         </div>)
 }
