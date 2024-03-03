@@ -7,12 +7,25 @@
     "shortdesc": "Mercedes-Benz Clone",
     "link": "https://mercedes-benz-seven.vercel.app",
     "github": "https://github.com/WalidAit69/Mercedes",
+    "gallerytitles": [
+      {
+        "title": "Categories",
+        "description": "Categories with style"
+      },
+      {
+        "title": "Beyond",
+        "description": "Defining Class"
+      },
+      {
+        "title": "Menu",
+        "description": "Clean animated menu"
+      }
+    ],
     "gallery": {
       "0": "/mercedes/video1.mp4",
       "1": "/mercedes/video2.mp4",
       "2": "/mercedes/video3.mp4",
-      "3": "/mercedes/video4.mp4",
-      "4": "/mercedes/img/mercedes.png"
+      "3": "/mercedes/video4.mp4"
     }
   },
   {
@@ -23,12 +36,26 @@
     "description": "Roomsy is a web application dedicated to simplifying the booking process for accommodations.",
     "shortdesc": "Booking Web App",
     "github": "https://github.com/WalidAit69/Roomsy",
+    "gallerytitles": [
+      {
+        "title": "Searching",
+        "description": "Search by location and dates"
+      },
+      {
+        "title": "Clean Design",
+        "description": ""
+      },
+      {
+        "title": "Profile",
+        "description": "Editable Profile Page"
+      }
+    ],
     "gallery": {
-      "0": "/mercedes/video1.mp4",
-      "1": "/mercedes/video2.mp4",
-      "2": "/mercedes/video3.mp4",
-      "3": "/mercedes/video4.mp4",
-      "4": "/mercedes/img/mercedes.png"
+      "0": "/roomsy/roomsy1.mp4",
+      "1": "/roomsy/roomsy2.mp4",
+      "2": "/roomsy/roomsy3.mp4",
+      "3": "/roomsy/roomsy4.mp4",
+      "4": "/roomsy/roomsy5.mp4"
     }
   },
   {

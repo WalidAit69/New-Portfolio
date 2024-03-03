@@ -752,6 +752,7 @@
     margin: 0;
     position: absolute;
     text-align: center;
+    margin-top: 10rem;
 }
 
 .WorkDetail .work-container .work-title h3 {
@@ -943,7 +944,7 @@
 .right-WorkFeature video {
     width: 100%;
     height: 450px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 25px;
 }
 

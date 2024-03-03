@@ -64,14 +64,16 @@ function OtherProjects() {
                             src={img} alt="" />
                     </div>
 
-                    <motion.div
+                    <motion.a
+                        href='https://github.com/WalidAit69'
+                        target='_blank'
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 2, delay: .2, ease: [0.8, 0, 0, 0.8] }}
                         className='other-projects-title'>
                         <motion.img src={github} alt="" />
                         <motion.span>Visit my Github for more projects !</motion.span>
-                    </motion.div>
+                    </motion.a>
                 </div>
             </section>
 

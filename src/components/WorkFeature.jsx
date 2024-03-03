@@ -2,7 +2,7 @@ import React from 'react';
 import img from "../assets/1.jpg"
 import { motion } from "framer-motion"
 
-function WorkFeature({ reverse, title, desc, image, video }) {
+function WorkFeature({ reverse, title, desc, image, video, link }) {
     return (
         <section className={`WorkFeature ${reverse && 'WorkFeaturereverse'}`}>
             <motion.div
@@ -12,7 +12,7 @@ function WorkFeature({ reverse, title, desc, image, video }) {
                 className="left-WorkFeature">
                 <span>{title}</span>
                 <p>{desc}</p>
-                <a href="" className='workdetail-btn'>View project</a>
+                <a href={link} target='_blank' className='workdetail-btn'>View project</a>
             </motion.div>
 
             {!reverse ? <motion.div

@@ -1,7 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { motion, useAnimation, useScroll } from "framer-motion";
+import { motion, useAnimation, useInView, useScroll } from "framer-motion";
 import WorkDetailTitle from '../components/WorkDetailTitle';
 import WorkFeature from '../components/WorkFeature';
 import OtherProjects from '../components/OtherProjects';
@@ -98,13 +98,30 @@ function WorkDetail() {
         };
     }, []);
 
+    const divRef = useRef(null);
+    const h1controls = useAnimation();
+    const isinview = useInView(divRef);
+
+    useEffect(() => {
+        if (isinview) {
+            h1controls.start({
+                marginTop: 0,
+            });
+
+        } else {
+            h1controls.start({
+                marginTop: "10rem",
+            });
+        }
+
+    }, [isinview, h1controls]);
 
     return (
         <main className='WorkDetail'>
             <section className='work-container'>
                 <div className='work-title'>
-                    <div>
-                        <motion.h1 initial={{ marginTop: '5rem' }} whileInView={{ marginTop: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}><span>{singleCard?.title}</span></motion.h1>
+                    <div ref={divRef}>
+                        <motion.h1 initial={{ marginTop: '10rem' }} animate={h1controls} transition={{ duration: 1, ease: 'easeInOut' }}><span>{singleCard?.title}</span></motion.h1>
                     </div>
                     <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 1, ease: 'easeInOut' }}><span>{singleCard?.description}</span></motion.h3>
                 </div>
@@ -158,9 +175,9 @@ function WorkDetail() {
 
             <WorkDetailTitle link={singleCard?.link} description={singleCard?.shortdesc} />
 
-            <WorkFeature title="Categories" desc="Categories with style" video={singleCard?.gallery[2]} />
-            <WorkFeature reverse={true} title="Beyond" desc="Defining Class" video={singleCard?.gallery[1]} />
-            <WorkFeature title="Menu" desc="Clean animated menu" video={singleCard?.gallery[3]} />
+            <WorkFeature title={singleCard?.gallerytitles[0]?.title} desc={singleCard?.gallerytitles[0]?.description} video={singleCard?.gallery[2]} link={singleCard?.link} />
+            <WorkFeature reverse={true} title={singleCard?.gallerytitles[1]?.title} desc={singleCard?.gallerytitles[1]?.description} video={singleCard?.gallery[1]} link={singleCard?.link} />
+            <WorkFeature title={singleCard?.gallerytitles[2]?.title} desc={singleCard?.gallerytitles[2]?.description} video={singleCard?.gallery[3]} link={singleCard?.link} />
 
             <OtherProjects />
         </main >
