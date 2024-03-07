@@ -231,6 +231,11 @@ header h1 {
     }
 }
 
+@media (max-width:1600px) {
+    .header{
+        margin: 1rem 0;
+    }
+}
 
 @media (max-width:1024px) {
     .header {

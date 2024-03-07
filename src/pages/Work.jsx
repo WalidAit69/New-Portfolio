@@ -43,7 +43,7 @@ function Work() {
 
                 <div className='cards-container'>
                     {workcards.length > 0 && workcards.map((card, index) => (
-                        <WorkCard key={index} image={card.image} title={card.title} link={card.link} />
+                        <WorkCard key={index} image={card.image} title={card.title} link={card.link} stack={card.isfullstack}/>
                     ))}
                 </div>
             </section>

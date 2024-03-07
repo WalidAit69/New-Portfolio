@@ -36,6 +36,7 @@
     "description": "Roomsy is a web application dedicated to simplifying the booking process for accommodations.",
     "shortdesc": "Booking Web App",
     "github": "https://github.com/WalidAit69/Roomsy",
+    "isfullstack": true,
     "gallerytitles": [
       {
         "title": "Searching",
@@ -60,26 +61,61 @@
   },
   {
     "id": "3",
-    "image": "/src/assets/mercedes-logo.png",
-    "title": "Example Project",
-    "link": "https://example-project.vercel.app"
+    "title": "Buletin",
+    "link": "https://buletin-v2.vercel.app/",
+    "image": "/buletin/buletin.png",
+    "description": "Buletin is a dynamic and user-friendly web application designed for blogging and delivering the latest news.",
+    "shortdesc": "Blogging Web App",
+    "github": "https://github.com/WalidAit69/Buletin",
+    "isfullstack": true,
+    "gallerytitles": [
+      {
+        "title": "Profile",
+        "description": "Editable Profile Page"
+      },
+      {
+        "title": "Clean Design",
+        "description": ""
+      },
+      {
+        "title": "Blogging",
+        "description": "User Friendly Interface"
+      }
+    ],
+    "gallery": {
+      "0": "/buletin/buletin1.mp4",
+      "1": "/buletin/buletin2.mp4",
+      "2": "/buletin/buletin3.mp4",
+      "3": "/buletin/buletin4.mp4"
+    }
   },
   {
     "id": "4",
-    "image": "/src/assets/mercedes-logo.png",
-    "title": "Another Example",
-    "link": "https://another-example.vercel.app"
-  },
-  {
-    "id": "5",
-    "image": "/src/assets/mercedes-logo.png",
-    "title": "Yet Another Project",
-    "link": "https://yet-another-project.vercel.app"
-  },
-  {
-    "id": "6",
-    "image": "/src/assets/mercedes-logo.png",
-    "title": "Final Example",
-    "link": "https://final-example.vercel.app"
+    "title": "Gucci",
+    "link": "https://gucci-v2.vercel.app/",
+    "image": "/gucci/gucci.svg",
+    "description": "Gucci Landing Page recreated with next.js and tailwind Css",
+    "shortdesc": "Gucci Clone",
+    "github": "https://github.com/WalidAit69/gucci",
+    "gallerytitles": [
+      {
+        "title": "Contact",
+        "description": ""
+      },
+      {
+        "title": "Clean Design",
+        "description": ""
+      },
+      {
+        "title": "Menu",
+        "description": ""
+      }
+    ],
+    "gallery": {
+      "0": "/gucci/gucci1.mp4",
+      "1": "/gucci/gucci1.mp4",
+      "2": "/gucci/gucci3.mp4",
+      "3": "/gucci/gucci2.mp4"
+    }
   }
 ]
