@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { PiArrowRightThin } from 'react-icons/pi'
 import { motion } from 'framer-motion'
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 function Contact() {
 
@@ -14,6 +16,38 @@ function Contact() {
         setFocusedInput(null);
     };
 
+    const formRef = useRef(null);
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [loading, setloding] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        setloding(true);
+        emailjs
+            .sendForm(
+                "service_6kzf67m",
+                "template_s5huwor",
+                formRef.current,
+                "BmmEM5sjNi0Nva_4K"
+            )
+            .then(
+                (result) => {
+                    toast.success("Email sent");
+                    setSuccess(true);
+                    formRef?.current?.reset();
+                    setloding(false);
+                },
+                (error) => {
+                    toast.error("Error sending email");
+                    setError(true);
+                    setloding(false);
+                }
+            );
+    };
+
+
     return (
         <section className='section5'>
             <div className="contact container">
@@ -22,7 +56,7 @@ function Contact() {
                     <motion.p initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .5, delay: .2, ease: 'easeInOut' }}>Got a question or proposal, or just want to say hello? Go ahead.</motion.p>
                 </div>
 
-                <form action="">
+                <form action="" ref={formRef} onSubmit={sendEmail}>
                     <div className='inputs'>
                         <div className={`input ${focusedInput === 'name' ? 'focused' : ''}`}>
                             <label htmlFor="name">Your Name</label>
@@ -48,13 +82,15 @@ function Contact() {
                     </div>
 
                     <div className='contact-btn'>
-                        <button className='shelf-btn'>
-                            shoot
-                            <PiArrowRightThin size={30} />
+                        <button className='shelf-btn' disabled={loading}>
+                            {!loading ? <>
+                                shoot
+                                <PiArrowRightThin size={30} /></> : "Loading..."}
                         </button>
                     </div>
                 </form>
             </div>
+            <Toaster />
         </section>
     )
 }

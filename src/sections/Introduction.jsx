@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import handsome from "../assets/profile.jpg";
+import handsome from "../assets/handsome2.jpeg";
 import particles from "../assets/particles.svg";
 import longparticle from "../assets/longparticle.svg";
 import "../App.css";
@@ -57,7 +57,7 @@ function Introduction() {
         <div className="right-presentation">
           <div className="handsome">
             <figure>
-              <motion.img initial={{ height: 0 }} whileInView={{ height: "100%" }} transition={{ duration: 1, ease: 'easeInOut' }} src={handsome} className='handsome-img' alt="a very handsome man" />
+              <motion.img initial={{ height: 0 }} whileInView={{ height: "100%" }} transition={{ duration: 1, ease: 'easeInOut' }} src={handsome} className='handsome-img' alt="a handsome man" />
               <img className='particles' src={particles} />
             </figure>
           </div>
