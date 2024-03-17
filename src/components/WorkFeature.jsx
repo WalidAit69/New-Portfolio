@@ -1,5 +1,4 @@
 import React from 'react';
-import img from "../assets/1.jpg"
 import { motion } from "framer-motion"
 
 function WorkFeature({ reverse, title, desc, image, video, link }) {

@@ -8,6 +8,7 @@
     "link": "https://midjourneyv2.vercel.app/",
     "github": "https://github.com/WalidAit69/Midjourney-AI",
     "isfullstack": true,
+    "background": "https://ucarecdn.com/767840be-814d-4dbe-87ac-ca3b8b81d147/",
     "gallerytitles": [
       {
         "title": "Dashboard",
@@ -38,6 +39,7 @@
     "shortdesc": "Booking Web App",
     "github": "https://github.com/WalidAit69/Roomsy",
     "isfullstack": true,
+    "background": "https://ucarecdn.com/6391b71f-3d39-44be-8839-005762370452/",
     "gallerytitles": [
       {
         "title": "Searching",
@@ -69,6 +71,7 @@
     "shortdesc": "Blogging Web App",
     "github": "https://github.com/WalidAit69/Buletin",
     "isfullstack": true,
+    "background": "https://ucarecdn.com/043b5d95-202e-48ad-a0f2-f1a41e8a5116/",
     "gallerytitles": [
       {
         "title": "Profile",
@@ -98,6 +101,7 @@
     "shortdesc": "Mercedes-Benz Clone",
     "link": "https://mercedes-benz-seven.vercel.app",
     "github": "https://github.com/WalidAit69/Mercedes",
+    "background": "https://ucarecdn.com/eb8ee038-f8fa-4acf-b30b-22419f7fc7ff/",
     "gallerytitles": [
       {
         "title": "Categories",
@@ -127,6 +131,7 @@
     "description": "Gucci Landing Page recreated with next.js and tailwind Css",
     "shortdesc": "Gucci Clone",
     "github": "https://github.com/WalidAit69/gucci",
+    "background": "https://ucarecdn.com/27ff0342-005c-41ad-934e-0e307a060ad1/",
     "gallerytitles": [
       {
         "title": "Contact",
@@ -146,6 +151,37 @@
       "1": "/gucci/gucci1.mp4",
       "2": "/gucci/gucci3.mp4",
       "3": "/gucci/gucci2.mp4"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Ai Chat",
+    "link": "https://ai-chat-app-six.vercel.app/",
+    "image": "/aichat/logo.svg",
+    "description": "A real-time Messaging App that seamlessly translates messages.",
+    "shortdesc": "Communication Made Easy",
+    "github": "https://github.com/WalidAit69/AI-Chat-App",
+    "isfullstack": true,
+    "background": "https://ucarecdn.com/1f1f315e-df74-4d50-bc4f-399c49885800/",
+    "gallerytitles": [
+      {
+        "title": "Translation",
+        "description": ""
+      },
+      {
+        "title": "Clean Design",
+        "description": ""
+      },
+      {
+        "title": "Chat Controls",
+        "description": ""
+      }
+    ],
+    "gallery": {
+      "0": "/aichat/aichat1.mp4",
+      "1": "/aichat/aichat1.mp4",
+      "2": "/aichat/aichat2.mp4",
+      "3": "/aichat/aichat3.mp4"
     }
   }
 ]

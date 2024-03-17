@@ -13,12 +13,14 @@ import particles2 from "../assets/workparticle2.svg";
 function WorkDetail() {
     const { setisHome, setisResume } = useHeaderStore();
     const [singleCard, setsingleCard] = useState();
+    const [Projects, setProjects] = useState();
     const { title } = useParams();
 
     const fetchData = async (cardTitle) => {
         try {
             const response = await axios.get('/workdata.json');
             const cards = response.data;
+            setProjects(response?.data);
 
             setsingleCard(cards.find((card) => card.title === cardTitle));
 
@@ -28,6 +30,7 @@ function WorkDetail() {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         fetchData(title);
     }, [title]);
 
@@ -179,7 +182,7 @@ function WorkDetail() {
             <WorkFeature reverse={true} title={singleCard?.gallerytitles[1]?.title} desc={singleCard?.gallerytitles[1]?.description} video={singleCard?.gallery[1]} link={singleCard?.link} />
             <WorkFeature title={singleCard?.gallerytitles[2]?.title} desc={singleCard?.gallerytitles[2]?.description} video={singleCard?.gallery[3]} link={singleCard?.link} />
 
-            <OtherProjects />
+            <OtherProjects Projects={Projects} title={title} />
         </main >
     )
 }

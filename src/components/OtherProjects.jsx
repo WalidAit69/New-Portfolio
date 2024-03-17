@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import img from "../assets/1.jpg"
 import github from "../assets/GitHub-Logo.png"
 import FooterSm from './FooterSm'
 import { easeInOut, motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
-function OtherProjects() {
+function OtherProjects({ Projects, title }) {
     const [scrollProgress, setScrollProgress] = useState(0);
 
     useEffect(() => {
+        CurrentProject();
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const section = document.querySelector('.other-projects');
@@ -22,12 +23,22 @@ function OtherProjects() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll();
+        // handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    function CurrentProject(e) {
+        if (e?.id) {
+            if (e?.id === title) {
+                e.style.border = "5px solid #ccf381";
+            } else {
+                e.style.border = "none";
+            }
+        }
+    }
 
 
     return (
@@ -35,33 +46,53 @@ function OtherProjects() {
             <section className='other-projects'>
                 <div className='other-projects-container'>
                     <div className='other-projects-img-container'>
-                        <motion.img
-                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -5}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -2}deg` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -20}px` }), }}
-                            transition={{ ease: easeInOut }}
-                            src={img} alt="" />
-                        <motion.img
-                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -1}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -20}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -10}px` }), }}
-                            transition={{ ease: easeInOut }}
-                            src={img} alt="" />
-                        <motion.img
-                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -.5}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -30}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -5}px` }), }}
-                            transition={{ ease: easeInOut }}
-                            src={img} alt="" />
+                        <Link to={"/work/Midjourney"}>
+                            <motion.img
+                                id='Midjourney'
+                                style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -5}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -2}deg` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -20}px` }), }}
+                                transition={{ ease: easeInOut }}
+                                onLoad={(e) => CurrentProject(e.target)}
+                                src={Projects && Projects[0]?.background} alt="" /></Link>
+                        <Link to={"/work/Roomsy"}>
+                            <motion.img
+                                id='Roomsy'
+                                style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -1}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -20}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -10}px` }), }}
+                                transition={{ ease: easeInOut }}
+                                onLoad={(e) => CurrentProject(e.target)}
+                                src={Projects && Projects[1]?.background} alt="" /></Link>
+                        <Link to={"/work/Buletin"}>
+                            <motion.img
+                                id='Buletin'
+                                style={{ x: window.innerWidth > 1024 ? `${scrollProgress * -10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * -.5}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -30}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * -5}px` }), }}
+                                transition={{ ease: easeInOut }}
+                                onLoad={(e) => CurrentProject(e.target)}
+                                src={Projects && Projects[2]?.background} alt="" /></Link>
                     </div>
 
                     <div className='other-projects-img-container'>
-                        <motion.img
-                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 5}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * 2}deg` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 20}px` }), }}
-                            transition={{ ease: easeInOut }}
-                            src={img} alt="" />
-                        <motion.img
-                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * 1}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -20}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 10}px` }), }}
-                            transition={{ ease: easeInOut }}
-                            src={img} alt="" />
-                        <motion.img
-                            style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * .5}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -30}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 5}px` }), }}
-                            transition={{ ease: easeInOut }}
-                            src={img} alt="" />
+                        <Link to={"/work/Mercedes-Benz"}>
+                            <motion.img
+                                id='Mercedes-Benz'
+                                style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 5}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * 2}deg` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 20}px` }), }}
+                                transition={{ ease: easeInOut }}
+                                src={Projects && Projects[3]?.background} alt=""
+                                onLoad={(e) => CurrentProject(e.target)}
+                            />
+                        </Link>
+                        <Link to={"/work/Gucci"}>
+                            <motion.img
+                                id='Gucci'
+                                style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * 1}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -20}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 10}px` }), }}
+                                transition={{ ease: easeInOut }}
+                                onLoad={(e) => CurrentProject(e.target)}
+                                src={Projects && Projects[4]?.background} alt="" /></Link>
+                        <Link to={"/work/Ai Chat"}>
+                            <motion.img
+                                id='Ai Chat'
+                                style={{ x: window.innerWidth > 1024 ? `${scrollProgress * 10}px` : '0', rotate: window.innerWidth > 1024 ? `${scrollProgress * .5}deg` : '0', y: window.innerWidth > 1024 ? `${scrollProgress * -30}px` : '0', ...(window.innerWidth <= 1024 && { x: `${scrollProgress * 5}px` }), }}
+                                transition={{ ease: easeInOut }}
+                                onLoad={(e) => CurrentProject(e.target)}
+                                src={Projects && Projects[5]?.background} alt="" /></Link>
                     </div>
 
                     <motion.a
